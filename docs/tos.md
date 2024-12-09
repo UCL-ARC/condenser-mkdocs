@@ -22,9 +22,7 @@ If you:
 - or are suspected to have shared your access credentials,
 - or are suspected to be involved in a security incident,
 
-we may raise this with relevant UCL teams[^fn-isg] and suspend your access to services until any relevant processes have been completed.
-
-[^fn-isg]: I.e. the Information Security Group, or Human Resources.
+we may raise this with relevant UCL teams (such as the Information Security Group, or Human Resources) and suspend your access to services until any relevant processes have been completed.
 
 ## Your Data
 
@@ -40,7 +38,7 @@ We will not access your data without your consent, except in the following circu
 - We have reason to believe the data is relevant to investigating an on-going security incident.
 - In automated service processes, such as backups, or transfers between storage systems for service maintenance.
 
-Occasionally support requests can involve more involved work, including accessing resources as a user. Since this can be disruptive or involve changes to your resources, in this case we will check with you when it is safe to begin the work, and we will notify you when the work has ended.
+Occasionally support requests require more involved work, including accessing resources as a user. This can be disruptive or involve changes to your resources. In this case we will check with you when it is safe to begin the work, and we will notify you when the work has ended.
 
 ## Acknowledgement in Works
 
