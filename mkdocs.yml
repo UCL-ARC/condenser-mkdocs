@@ -3,3 +3,5 @@ theme: readthedocs
 nav:
   - Home: index.md
   - Terms of Service: tos.md
+copyright: "UCL Advanced Research Computing, 2024"
+site_description: "Documentation for the UCL Condenser Platform"
