@@ -1,1 +1,5 @@
-site_name: My Docs
+site_name: Condenser
+theme: readthedocs
+nav:
+  - Home: index.md
+  - Terms of Service: tos.md
