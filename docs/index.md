@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Condenser Documentation Home
 layout: docs
 ---
 
