@@ -1,11 +1,8 @@
 ---
-title: Terms of Service
-categories:
- - User Guide
-layout: docs
+title: Terms and Conditions
 ---
 
-# Terms of Service
+# Terms and Conditions of Use
 
 All use of Condenser is subject to the general [UCL Computing Regulations](https://www.ucl.ac.uk/information-security/sites/information_security/files/regulations.pdf).
 
@@ -23,7 +20,7 @@ If you:
 - or are suspected to be involved in a security incident,
 
 we may raise this with relevant UCL teams (such as the Information Security Group,
-or Human Resources) and suspend your access to services until any relevant processes
+or Human Resources) and suspend your access to the platform until any relevant processes
 have been completed.
 
 ## Your Data
@@ -41,8 +38,8 @@ We will not access your data without your consent, except in the following circu
 - You contact us with a support issue and the data is relevant to your request.
 - We have reason to believe the data is relevant to investigating an on-going security
   incident.
-- In automated service processes, such as backups, or transfers between storage
-  systems for service maintenance.
+- In automated processes, such as backups, or transfers between storage systems
+  for platform maintenance.
 
 Occasionally support requests require more involved work, including accessing resources
 as a user. This can be disruptive or involve changes to your resources. In this
@@ -55,4 +52,4 @@ We request that you acknowledge the use of Condenser in any publications describ
 research that has used the system, in any part. The following words should be used:
 
 > "The authors acknowledge the use of the UCL Condenser Platform, and associated
-> support services, in the completion of this work".
+> support services, in the completion of this work."
