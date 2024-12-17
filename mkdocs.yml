@@ -4,13 +4,13 @@ nav:
   - Home: index.md
   - Terms and Conditions: terms_and_conditions.md
   - About the Platform: about.md
-  - Developer Guide
+  - Developer Guide:
     - Getting Started: getting_started.md
     - Deploying with the Rancher GUI: deploying_rancher.md
     - Deploying with Terraform: deploying_terraform.md
     - Deploying with Kubernetes: deploying_kubernetes.md
     - Configuring a VM for web ingress: ingress.md
-  - End User Guide
+  - End User Guide:
     - Accessing a VM by SSH: ssh.md
 copyright: "UCL Advanced Research Computing, 2024"
 site_description: "Documentation for the UCL Condenser Platform"
