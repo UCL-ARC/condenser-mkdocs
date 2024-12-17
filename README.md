@@ -1,6 +1,6 @@
 # condenser-mkdocs
 
-Documentation for the Condenser Platform at UCL.
+Documentation for the Condenser platform at UCL.
 
 > [!IMPORTANT]
 > The information in this repository may be incomplete or under review. It should
