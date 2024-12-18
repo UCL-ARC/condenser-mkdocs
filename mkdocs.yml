@@ -1,5 +1,9 @@
 site_name: Condenser User Documentation
 theme: readthedocs
+not_in_nav: |
+  /stubs
+copyright: "UCL Advanced Research Computing, 2024"
+site_description: "Documentation for the UCL Condenser Platform"
 nav:
   - Home: index.md
   - Terms and Conditions: terms_and_conditions.md
@@ -13,5 +17,3 @@ nav:
     - Example Deployments: developer_guide/examples.md
   - End User Guide:
     - Accessing a VM by SSH: end_user_guide/ssh.md
-copyright: "UCL Advanced Research Computing, 2024"
-site_description: "Documentation for the UCL Condenser Platform"
