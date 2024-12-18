@@ -9,7 +9,7 @@ Ingress must be enabled on your tenancy before it can be configured.
 
 HTTPS ingress will be configured with:
 
-- `https://[hostname].[rancher project name].condenser.arc.ucl.ac.uk`
+- A URL: `https://[hostname].[rancher project name].condenser.arc.ucl.ac.uk`
 - A valid LetsEncrypt certificate
 
 By default traffic will be routed to the `eth0` network interface on the VM, using
@@ -61,18 +61,10 @@ condenser_ingress_test_hostname: some-hostname-here
 
 #### Required Labels
 
-- `hostname`
-  - Usage: `condenser_ingress_[site-key]/hostname: [hostname]`
-  - Description: Used to determine the FQDN. The final ingressed FQDN will be
-    `[hostname].[rancher project name].condenser.arc.ucl.ac.uk`
+- `condenser_ingress_[site-key]/hostname: [hostname]`: Used to determine the FQDN.
+  The final ingressed FQDN will be `[hostname].[rancher project name].condenser.arc.ucl.ac.uk`
 
 #### Optional Labels
-
-- `port`
-- `protocol`
-- `vip`
-- `interface`
-
 
 - `condenser_ingress_[site-key]/port: [port]`: Target port (default 443 if `protocol` is https, 80 otherwise)
 - `condenser_ingress_[site-key]/protocol: [protocol]`: Target protocol (default http)
