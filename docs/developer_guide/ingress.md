@@ -2,47 +2,77 @@
 title: Configuring a VM for web ingress
 ---
 
+# Configuring a VM for web ingress
 
-# HTTPS Ingress Configuration
-
-HTTPS ingress to condenser can be configured automatically by tagging resources. Ingress must be enabled on your tenancy before it can be configured.
+Web ingress to Condenser can be configured automatically by tagging resources.
+Ingress must be enabled on your tenancy before it can be configured.
 
 HTTPS ingress will be configured with:
 
-- https://[hostname].[rancher project name].condenser.arc.ucl.ac.uk
+- `https://[hostname].[rancher project name].condenser.arc.ucl.ac.uk`
 - A valid LetsEncrypt certificate
 
-By default, unless you specify otherwise, traffic will be routed to `eth0` on the Virtual Machine, using HTTP on port 80.
+By default traffic will be routed to the `eth0` network interface on the VM, using
+HTTP on port 80.
 
-If a VM's IP address changes, the ingress rule will be updated. If a VM is powered off, the ingress rule will be deleted. Once the VM is powered back on, the ingress rule will be recreated.
+If a VM's IP address changes, the ingress rule will be updated. If a VM is powered
+off, the ingress rule will be deleted. Once the VM is powered back on, the ingress
+rule will be recreated.
+
+!!! note
+    Virtual machines can be configured with both tags and labels. On Condenser,
+    ingress works by parsing tags into labels. This was done so that ingress can
+    be configured automatically through Terraform, since only tags can be configured
+    with the `harvester_virtualmachine` resource. In the GUI, you can configure either.
+    You may wish to stick to one or the other (e.g. only modify tags, or only modify
+    labels) to prevent confusion.
 
 ## Configuration
 
 ### Using Terraform
 
-If using the [Harvester Terraform provider](https://registry.terraform.io/providers/harvester/harvester/latest/docs), ingress rules should be configured using the `tags` argument on the `harvester_virtualmachine` resource.
+If using the [Harvester Terraform provider](https://registry.terraform.io/providers/harvester/harvester/latest/docs),
+ingress rules should be configured using the `tags` argument on the [`harvester_virtualmachine`](https://registry.terraform.io/providers/harvester/harvester/latest/docs/resources/virtualmachine)
+resource.
 
 #### Enable Ingress to a VM
 
 Add the following tag to enable ingress to a VM:
 
-- `condenser_ingress_isEnabled: true`
+``` yaml
+condenser_ingress_isEnabled: true
+```
 
 #### Configure a Site
 
-Each VM can support multiple sites - choose a unique key per site to ensure configuration is applied to the correct site. Keys must be unique within a VM. You should add a tag in the following format:
+Each VM can support multiple sites - choose a unique key per site to ensure configuration
+is applied to the correct site. Keys must be unique within a VM. You should add
+a tag in the following format:
 
-- `condenser_ingress_[site-key]_[label-name]: value`
+``` yaml
+condenser_ingress_[site-key]_[label-name]: value
+```
 
 For example, if you choose a key, `test`, the `hostname` label would be configured using:
 
-- `condenser_ingress_test_hostname: some-hostname-here`
+``` yaml
+condenser_ingress_test_hostname: some-hostname-here
+```
 
 #### Required Labels
 
-- `condenser_ingress_[site-key]/hostname: [hostname]`: where the final ingressed FQDN is `[hostname].[rancher project name].condenser.arc.ucl.ac.uk`
+- `hostname`
+  - Usage: `condenser_ingress_[site-key]/hostname: [hostname]`
+  - Description: Used to determine the FQDN. The final ingressed FQDN will be
+    `[hostname].[rancher project name].condenser.arc.ucl.ac.uk`
 
 #### Optional Labels
+
+- `port`
+- `protocol`
+- `vip`
+- `interface`
+
 
 - `condenser_ingress_[site-key]/port: [port]`: Target port (default 443 if `protocol` is https, 80 otherwise)
 - `condenser_ingress_[site-key]/protocol: [protocol]`: Target protocol (default http)
