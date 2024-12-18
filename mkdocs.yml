@@ -1,5 +1,7 @@
 site_name: Condenser User Documentation
-theme: readthedocs
+theme:
+  name: readthedocs
+  prev_next_buttons_location: None
 not_in_nav: |
   /stubs
 copyright: "UCL Advanced Research Computing, 2024"
