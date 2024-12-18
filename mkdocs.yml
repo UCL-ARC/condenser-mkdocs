@@ -1,11 +1,18 @@
 site_name: Condenser User Documentation
 theme:
-  name: readthedocs
-  prev_next_buttons_location: None
+  name: material
+  features:
+    - content.action.edit
 not_in_nav: |
   /stubs
 copyright: "UCL Advanced Research Computing, 2024"
 site_description: "Documentation for the UCL Condenser Platform"
 repo_url: https://github.com/UCL-ARC/condenser-mkdocs
-edit_uri: blob/main/docs/
+edit_uri: edit/main/docs/
 site_url: https://docs.condenser.arc.ucl.ac.uk
+plugins:
+  - git-revision-date-localized
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
