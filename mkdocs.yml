@@ -13,6 +13,7 @@ site_url: https://docs.condenser.arc.ucl.ac.uk
 plugins:
   - git-revision-date-localized
 markdown_extensions:
+  - admonition
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences
