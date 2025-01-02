@@ -15,7 +15,7 @@ to the Harvester cluster. Do not share it with anyone.
 2. Navigate to the Harvester cluster that you want to access
 3. In the bottom left corner, click on **Support**
 4. Click on **Download KubeConfig**. Your browser will download a file named
-   `<cluster name>.yaml`
+`<cluster name>.yaml`
 5. Open the downloaded file in a text editor
 6. Remove the `certificate-authority-data` key and value
 
