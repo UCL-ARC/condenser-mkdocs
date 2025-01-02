@@ -4,6 +4,8 @@ title: Deploying with the Rancher GUI
 
 # Deploying with the Rancher GUI
 
+## Navigate to the cluster where your tenancy is assigned
+
 1. Enable the UCL ISD VPN: `asa-vpn-isd.ucl.ac.uk`
 2. Navigate to the Rancher GUI for Condenser: `https://rancher.condenser.arc.ucl.ac.uk`
     1. Click on **Log in with AzureAD** to log in with your UCL credentials
@@ -13,7 +15,9 @@ title: Deploying with the Rancher GUI
     under **Global Apps**
     3. From the list of Harvester clusters, click on the name of the cluster you
     wish to access, e.g. `sl-p01`
-4. Register a SSH Key
+
+## Register your SSH key
+
     1. On your local computer, generate a SSH key pair if you do not already have
     one with a passphrase
     2. Copy the contents of your public key onto your clipboard
@@ -23,7 +27,9 @@ title: Deploying with the Rancher GUI
     6. Enter an appropriate name for your SSH key
     7. Paste the contents of your public key into the text box under **Basics**
     8. Click **Create** in the lower right to register the SSH key
-5. Launch a Virtual Machine
+
+## Launch a Virtual Machine
+
     1. From the menu at left, select **Virtual Machines**
     2. Click **Create** in the upper right
     3. Select your tenancy namespace
@@ -53,14 +59,18 @@ title: Deploying with the Rancher GUI
         4. Name the template
         5. To start a VM from a template, omit steps 5.5-5.13. Instead tick the
         **Use VM Template** box and select the appropriate template.
-6. Log in to the VM
+
+## Log in to the VM with SSH
+
     1. From the menu at left, select **Virtual Machines**
     2. Identify the VM that you just launched in the list
     3. Wait for the IP address to appear, then copy it (the IP address will begin
     with `10.134`)
     4. Follow the instructions to [access the VM with SSH](../../end_user_guide/ssh.md)
 
-7. Terminate a VM
+## Change a VM's state
+
     1. From the menu at left, select **Virtual Machines**
     2. Tick the box next to the VM
-    3. Click **Delete** at the top of the table of VMs
+    3. Click **Stop**, **Restart**, **Start**, or **Delete** at the top of the table
+    of VMs
