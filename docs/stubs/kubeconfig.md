@@ -19,6 +19,8 @@ to the Harvester cluster. Do not share it with anyone.
 5. Open the downloaded file in a text editor
 6. Remove the `certificate-authority-data` key and value
 
+This is your kubeconfig file.
+
 The [Harvester Terraform provider](https://registry.terraform.io/providers/harvester/harvester/latest/docs#schema)
 accepts the path to the kubeconfig file from the `KUBECONFIG` environment variable
 or as configuration to the provider block.
