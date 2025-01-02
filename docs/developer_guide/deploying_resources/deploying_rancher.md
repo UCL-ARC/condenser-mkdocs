@@ -8,13 +8,12 @@ title: Deploying with the Rancher GUI
 
 1. Enable the UCL ISD VPN: `asa-vpn-isd.ucl.ac.uk`
 2. Navigate to the Rancher GUI for Condenser: `https://rancher.condenser.arc.ucl.ac.uk`
-    1. Click on **Log in with AzureAD** to log in with your UCL credentials
-3. Navigate to the cluster assigned to your tenancy
-    1. Begin at the Home page: `https://rancher.condenser.arc.ucl.ac.uk/dashboard/home`
-    2. Open the navigation (≡) at left and click on **Virtualization Management**
-    under **Global Apps**
-    3. From the list of Harvester clusters, click on the name of the cluster you
-    wish to access, e.g. `sl-p01`
+3. Click on **Log in with AzureAD** to log in with your UCL credentials
+4. Begin at the Home page: `https://rancher.condenser.arc.ucl.ac.uk/dashboard/home`
+5. Open the navigation at left (≡) and click on **Virtualization Management**
+   under **Global Apps**
+6. From the list of Harvester clusters, click on the name of the cluster you
+   wish to access, e.g. `sl-p01`
 
 ## Register your SSH key
 
