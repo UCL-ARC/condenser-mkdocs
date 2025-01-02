@@ -11,7 +11,9 @@ All hardware resides in UCL facilities.
 
 ## Tenancy
 
-Tenants are provided with access to a [Kubernetes](https://kubernetes.io/docs/home/)
-cluster. Members of a tenancy can deploy virtual machines and related cloud-computing
-resources with [Harvester](https://docs.harvesterhci.io). [Rancher](https://rancher.com/docs/)
-is used to provide access to the cluster and to apply resource quotas per-tenancy.
+Access to Condenser is organized in tenant groups. Tenants are responsible for
+managing their users and virtual resources. Members of a tenancy are provided with
+access to a [Kubernetes](https://kubernetes.io/docs/home/)
+cluster. Members can deploy virtual machines and related cloud-computing resources
+with [Harvester](https://docs.harvesterhci.io). [Rancher](https://rancher.com/docs/)
+is used to provide access to the cluster. Resource quotas are applied to the tenancy.
