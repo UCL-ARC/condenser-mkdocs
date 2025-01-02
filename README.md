@@ -14,4 +14,4 @@ request to contribute.
 
 Please do not make requests for support through this repository.
 
-To format the documentation pages, please refer to the [Material for Mkdocs](documentation).
+To format the documentation pages, please refer to the [Material for Mkdocs documentation](https://squidfunk.github.io/mkdocs-material/reference/).
