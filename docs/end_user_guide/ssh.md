@@ -36,7 +36,9 @@ You will need to provide your own (existing) SSH key to sign. On Windows, use
 [PuttyGen](https://www.puttygen.com) to create a key. On Linux/Mac OS WSL,
 you can use:
 
-`ssh-keygen -t ed25519`
+``` sh
+ssh-keygen -t ed25519
+```
 
 To generate a certificate:
 
@@ -45,8 +47,19 @@ https://developer.hashicorp.com/vault/install?product_intent=vault)
 2. Set the `VAULT_ADDR` environment variable to `https://vault.arc.ucl.ac.uk`
 (you may wish to add this to your local environment)
 3. Connect to the ISD VPN
-4. Login to Vault: `vault login -method=oidc`
-5. Generate a certificate: `vault write -field=signed_key ssh-environments-ingress/sign/cloud-user public_key=@/home/user/.ssh/id_ed25519.pub >  ~/.ssh/id_arc.signed`
+4. Login to Vault:
+
+   ``` sh
+   vault login -method=oidc
+   ```
+
+5. Generate a certificate:
+
+   ``` sh
+   vault write -field=signed_key ssh-environments-ingress/sign/cloud-user \
+   public_key=@/home/user/.ssh/id_ed25519.pub >  ~/.ssh/id_arc.signed
+   ```
+
 (change `/home/user/.ssh/id_ed25519.pub` to the location of your own public key)
 
 ## Connecting
@@ -56,7 +69,7 @@ https://developer.hashicorp.com/vault/install?product_intent=vault)
 1. Add a Host to your `~/.ssh/config`. If you generated the certificate using
 the SSH Portal, add:
 
-    ```shell
+    ``` sh
     Host condenser
       HostName ssh.condenser.arc.ucl.ac.uk
       User cloud-user
@@ -67,7 +80,7 @@ the SSH Portal, add:
     If you generated your certificate using Vault directly with your
     own key, add:
 
-    ```shell
+    ``` sh
     Host condenser
       HostName ssh.condenser.arc.ucl.ac.uk
       User cloud-user
@@ -81,13 +94,16 @@ the SSH Portal, add:
 
 2. Connect to the ISD VPN
 3. Connect via SSH to your machine running on Condenser using `-J condenser`:
-`ssh -J condenser username@hostname.your-subnet.condenser.arc.ucl.ac.uk`
+
+   ``` sh
+   ssh -J condenser username@hostname.your-subnet.condenser.arc.ucl.ac.uk
+   ```
 
 Note: To avoid havig to use `-J Condenser` every time, you can define a ProxyJump
 in your `~/.ssh/config`. For example, if your servers are `*.your-subnet.condenser.ucl.ac.uk`,
 add the following:
 
-```shell
+``` sh
 Host *.your-subnet.condenser.arc.ucl.ac.uk
   ProxyJump condenser
 ```
