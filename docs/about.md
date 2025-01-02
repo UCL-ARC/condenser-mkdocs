@@ -1,5 +1,5 @@
 ---
-title: About the Platform
+title: About the platform
 ---
 
 # About the Platform

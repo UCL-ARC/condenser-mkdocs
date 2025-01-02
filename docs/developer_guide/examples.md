@@ -1,5 +1,5 @@
 ---
-title: Example Deployments
+title: Example deployments
 ---
 
 # Example Deployments
