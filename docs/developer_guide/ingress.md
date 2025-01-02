@@ -53,7 +53,8 @@ a tag in the following format:
 condenser_ingress_[site-key]_[label-name]: value
 ```
 
-For example, if you choose a key, `test`, the `hostname` label would be configured using:
+For example, if you choose a key, `test`, the `hostname` label would be configured
+using:
 
 ``` yaml
 condenser_ingress_test_hostname: some-hostname-here
@@ -66,25 +67,33 @@ condenser_ingress_test_hostname: some-hostname-here
 
 #### Optional Labels
 
-- `condenser_ingress_[site-key]/port: [port]`: Target port (default 443 if `protocol` is https, 80 otherwise)
+- `condenser_ingress_[site-key]/port: [port]`: Target port (default 443 if `protocol`
+  is https, 80 otherwise)
 - `condenser_ingress_[site-key]/protocol: [protocol]`: Target protocol (default http)
-- `condenser_ingress_[site-key]/vip: [vip]`: Target VIP (if the IP address is not assigned to the VM)
-- `condenser_ingress_[site-key]/interface: [interface]`: Which network interface to use if the VM has multiple network interfaces (default `eth0`)
+- `condenser_ingress_[site-key]/vip: [vip]`: Target VIP (if the IP address is not
+  assigned to the VM)
+- `condenser_ingress_[site-key]/interface: [interface]`: Which network interface
+  to use if the VM has multiple network interfaces (default `eth0`)
 
 #### Advanced Nginx Configuration
 
-In addition to basic ingress rules, all [nginx annotations](https://github.com/kubernetes/ingress-nginx/blob/main/docs/user-guide/nginx-configuration/annotations.md) are supported.
+In addition to basic ingress rules, all [nginx annotations](https://github.com/kubernetes/ingress-nginx/blob/main/docs/user-guide/nginx-configuration/annotations.md)
+are supported.
 
-An annotation can be added to an ingress rule by substituting `nginx.ingress.kubernetes.io` with `condenser_ingress_[site-key]_nginx`. For example, to annotate an ingress rule, `test`, with `nginx.ingress.kubernetes.io/proxy-body-size: 8m`, add the following tag to your VM:
+An annotation can be added to an ingress rule by substituting `nginx.ingress.kubernetes.io`
+with `condenser_ingress_[site-key]_nginx`. For example, to annotate an ingress rule,
+`test`, with `nginx.ingress.kubernetes.io/proxy-body-size: 8m`, add the following
+tag to your VM:
 
 - `condenser_ingress_test_nginx/proxy-body-size: 8m`
 
 ### Rancher GUI
 
-To configure HTTPS ingress using the Rancher GUI, choose `Edit Config` on your VM and navigate to `Instance Labels`.
+To configure HTTPS ingress using the Rancher GUI, choose `Edit Config` on your VM
+and navigate to `Instance Labels`.
 
-**Note**: When saving your VM, Rancher will ask if you wish to restart the VM. Restarting the VM is *not* necessary to configure ingress.
-
+**Note**: When saving your VM, Rancher will ask if you wish to restart the VM.
+Restarting the VM is *not* necessary to configure ingress.
 
 #### Enable Ingress to a VM
 
@@ -94,30 +103,41 @@ To enable a VM for ingress, add the Instance Label:
 
 #### Configure a Site
 
-Each VM can support multiple sites - choose a unique key per site to ensure configuration is applied to the correct site. Keys must be unique within a VM. You should add a tag in the following format:
+Each VM can support multiple sites - choose a unique key per site to ensure configuration
+is applied to the correct site. Keys must be unique within a VM. You should add
+a tag in the following format:
 
 - `condenser.ingress.[site-key]/[label-name]: value`
 
-For example, if you choose a key, `test`, the `hostname` label would be configured using:
+For example, if you choose a key, `test`, the `hostname` label would be configured
+using:
 
 - `condenser.ingress.test/hostname: some-hostname-here`
 
 #### Required Labels
 
-- `condenser.ingress.[site-key]/hostname: <hostname>`: where the final ingressed FQDN is `<hostname>.<project name>.condenser.arc.ucl.ac.uk`
+- `condenser.ingress.[site-key]/hostname: <hostname>`: where the final ingressed
+  FQDN is `<hostname>.<project name>.condenser.arc.ucl.ac.uk`
 
 #### Optional Labels
 
-- `condenser.ingress.[site-key]/port: [port]`: Target port (default 443 if protocol is https, 80 otherwise)
+- `condenser.ingress.[site-key]/port: [port]`: Target port (default 443 if protocol
+  is https, 80 otherwise)
 - `condenser.ingress.[site-key]/protocol: [protocol]`: Target protocol (default http)
-- `condenser.ingress.[site-key]/vip: [vip]`: Target VIP (if the IP address is not assigned to the VM)
-- `condenser.ingress.[site-key]/interface: [interface]`: Which network interface to use if the VM has multiple network interfaces (default `eth0`)
+- `condenser.ingress.[site-key]/vip: [vip]`: Target VIP (if the IP address is not
+  assigned to the VM)
+- `condenser.ingress.[site-key]/interface: [interface]`: Which network interface
+  to use if the VM has multiple network interfaces (default `eth0`)
 
 #### Advanced Configuration
 
-In addition to basic ingress rules, all [nginx annotations](https://github.com/kubernetes/ingress-nginx/blob/main/docs/user-guide/nginx-configuration/annotations.md) are supported.
+In addition to basic ingress rules, all [nginx annotations](https://github.com/kubernetes/ingress-nginx/blob/main/docs/user-guide/nginx-configuration/annotations.md)
+are supported.
 
-An annotation can be added to an ingress rule by substituting `nginx.ingress.kubernetes.io` with `condenser.ingress.[site-key].nginx`. For example, to annotate an ingress rule, `test`, with `nginx.ingress.kubernetes.io/proxy-body-size: 8m`, add the following instance label to your VM:
+An annotation can be added to an ingress rule by substituting `nginx.ingress.kubernetes.io`
+with `condenser.ingress.[site-key].nginx`. For example, to annotate an ingress rule,
+`test`, with `nginx.ingress.kubernetes.io/proxy-body-size: 8m`, add the following
+instance label to your VM:
 
 - `condenser.ingress.test.nginx/proxy-body-size: 8m`
 
@@ -125,14 +145,16 @@ An annotation can be added to an ingress rule by substituting `nginx.ingress.kub
 
 #### Basic Ingress
 
-Create an ingress, `test`, which proxies `test-host.<project name>.condenser.arc.ucl.ac.uk` to the VM on port 80:
+Create an ingress, `test`, which proxies `test-host.<project name>.condenser.arc.ucl.ac.uk`
+to the VM on port 80:
 
 - `condenser.ingress/isEnabled: true`
 - `condenser.ingress.test/hostname: test-host`
 
 #### Basic Ingress with Terraform
 
-Create an ingress, `test`, which proxies `test-host.<project name>.condenser.arc.ucl.ac.uk` to the VM on port 80:
+Create an ingress, `test`, which proxies `test-host.<project name>.condenser.arc.ucl.ac.uk`
+to the VM on port 80:
 
 ```hcl
   tags = {
@@ -143,7 +165,8 @@ Create an ingress, `test`, which proxies `test-host.<project name>.condenser.arc
 
 #### Advanced Ingress with Terraform
 
-Create an ingress, `test`, which proxies `test-host.<project name>.condenser.arc.ucl.ac.uk` to the VM on port 80 with `proxy-body-size` set to 8m
+Create an ingress, `test`, which proxies `test-host.<project name>.condenser.arc.ucl.ac.uk`
+to the VM on port 80 with `proxy-body-size` set to 8m
 
 ```hcl
   tags = {
@@ -153,10 +176,10 @@ Create an ingress, `test`, which proxies `test-host.<project name>.condenser.arc
   }
 ```
 
-
 #### HTTPS Ingress
 
-Create an ingress, `test`, which proxies `test-host.<project name>.condenser.arc.ucl.ac.uk` to the VM on port 443 using HTTPS:
+Create an ingress, `test`, which proxies `test-host.<project name>.condenser.arc.ucl.ac.uk`
+to the VM on port 443 using HTTPS:
 
 - `condenser.ingress/isEnabled: true`
 - `condenser.ingress.test/hostname: test-host`
@@ -165,7 +188,8 @@ Create an ingress, `test`, which proxies `test-host.<project name>.condenser.arc
 
 #### Ingress to a K3s VIP on a custom port
 
-Create an ingress, `testvip`, which proxies `test-host.<project name>.condenser.arc.ucl.ac.uk` to a K3s cluster's VIP, 10.134.8.9 on port 8080 using HTTP:
+Create an ingress, `testvip`, which proxies `test-host.<project name>.condenser.arc.ucl.ac.uk`
+to a K3s cluster's VIP, 10.134.8.9 on port 8080 using HTTP:
 
 - `condenser.ingress/isEnabled: true`
 - `condenser.ingress.testvip/hostname: test-host`
@@ -174,7 +198,9 @@ Create an ingress, `testvip`, which proxies `test-host.<project name>.condenser.
 
 #### Multiple Ingresses
 
-Create two ingresses, `testone` and `testtwo`, which proxy `testone.<project name>.condenser.arc.ucl.ac.uk` and `testtwo.<project name>.condenser.arc.ucl.ac.uk` to the VM on port 8080/8081 respectively using HTTP:
+Create two ingresses, `testone` and `testtwo`, which proxy `testone.<project name>.condenser.arc.ucl.ac.uk`
+and `testtwo.<project name>.condenser.arc.ucl.ac.uk` to the VM on port 8080/8081
+respectively using HTTP:
 
 - `condenser.ingress/isEnabled: true`
 - `condenser.ingress.testone/hostname: testone`
@@ -184,7 +210,10 @@ Create two ingresses, `testone` and `testtwo`, which proxy `testone.<project nam
 
 #### Multiple Ingresses with advanced configuration
 
-Create two ingresses, `testone` and `testtwo`, which proxy `testone.<project name>.condenser.arc.ucl.ac.uk` and `testtwo.<project name>.condenser.arc.ucl.ac.uk` to the VM on port 8080/8081 respectively using HTTP. `testone` requires a `proxy-buffer-size` of 8k, whilst `testtwo` needs a `proxy-body-size` of 8m:
+Create two ingresses, `testone` and `testtwo`, which proxy `testone.<project name>.condenser.arc.ucl.ac.uk`
+and `testtwo.<project name>.condenser.arc.ucl.ac.uk` to the VM on port 8080/8081
+respectively using HTTP. `testone` requires a `proxy-buffer-size` of 8k, whilst
+`testtwo` needs a `proxy-body-size` of 8m:
 
 - `condenser.ingress/isEnabled: true`
 - `condenser.ingress.testone/hostname: testone`
