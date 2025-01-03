@@ -75,7 +75,8 @@ box and select the appropriate template
 2. Identify the VM that you just launched in the list
 3. Wait for the IP address to appear, then copy it. The IP address will begin with
 `10.134`.
-4. Follow these instructions to [access the VM with SSH](../../end_user_guide/ssh.md)
+4. Follow these instructions to [access the VM with SSH](../../end_user_guide/ssh.md).
+For VMs created from an Almalinux image, the username will be `almalinux`.
 
 ## Change a VM's state
 
