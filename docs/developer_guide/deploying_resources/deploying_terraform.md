@@ -23,7 +23,7 @@ on your local computer
 4. Using the Rancher GUI, find the name of a namespace in which you have permission
 to deploy resources
 5. If you configure the VM for SSH access, you will also need:
-    1. The name of a VM network in the namespace
+    1. The name of a VLAN network in the namespace
     2. The SSH public key data for your SSH key pair
 
 ## Write a basic Terraform module to launch a VM
@@ -38,7 +38,8 @@ After you have created the repository, clone it onto your local computer. In you
 terminal, navigate to the `terraform-template` directory. This will be the root
 directory of your terraform module.
 
-If you use the template, first clear the template content in each of the `*.tf` files.
+If you use the template, first delete the template content in each of the `*.tf`
+files.
 
 Alternatively, on your local computer create a new directory. This will be the
 root directory for your terraform module. In the new directory, create the following
@@ -236,8 +237,8 @@ kubectl get virtualmachineinstance.kubevirt.io --namespace my-ns
 ## Log in to the VM with SSH
 
 If you configured the VM for SSH access, the module will issue an IP address as output.
-Use it to [log in to the VM](../../end_user_guide/ssh.md). Run `terraform output`
-or `terraform state show "harvester_virtualmachine.vm"` to print it again.
+Run `terraform output` or `terraform state show "harvester_virtualmachine.vm"` to
+print it again.
 
 For VMs created from an Almalinux image, the username will be `almalinux`.
 
@@ -252,7 +253,7 @@ to tear the VM down.
 
 ### IP address is not reported by `kubectl` or the Rancher GUI
 
-If the IP address is successfully reported by terraform, then the address has been
+If the IP address is successfully reported by Terraform, then the address has been
 assigned but the VM needs to be restarted before it will appear in the VM's attributes
 in the kubernetes cluster. You can restart a VM using the [Rancher GUI](./deploying_rancher.md/#change-a-vms-state),
 or by issuing the `reboot` command over SSH. You can configure the VM to reboot automatically
