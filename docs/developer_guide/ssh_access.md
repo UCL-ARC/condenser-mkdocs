@@ -4,10 +4,10 @@ title: Configuring a VM for SSH access
 
 # Configuring a VM for SSH access
 
-To be accessible by SSH, a VM needs to be configured with a VM Network and the SSH
-public key data needs to be provided via [cloudinit](https://cloudinit.readthedocs.io/en/latest/reference/modules.html#ssh).
-This is demonstrated for Terraform deployments [here](./deploying_resources/deploying_terraform.md/#configure-the-vm-for-ssh-access)
-and for the Rancher GUI [here](./deploying_resources/deploying_rancher.md).
+To be accessible by SSH, a VM needs to be configured with a [VLAN Network](https://docs.harvesterhci.io/v1.2/networking/harvester-network/)
+and the SSH public key data needs to be provided via [cloudinit](https://cloudinit.readthedocs.io/en/latest/reference/modules.html#ssh).
+We have documentation demonstrating this for [Terraform deployments](./deploying_resources/deploying_terraform.md/#configure-the-vm-for-ssh-access)
+and for the [Rancher GUI](./deploying_resources/deploying_rancher.md).
 
 After the VM is configured, the IP address for the VM can be found in the Rancher
 GUI or by using `kubectl` with a suitable [kubeconfig file](../stubs/kubeconfig.md)
