@@ -16,7 +16,7 @@ be prompted more often than usual.
 
 ## Getting a Certificate
 
-## Web Interface
+### Web Interface
 
 You can quickly generate a new certificate without using the command line. The
 Portal will generate a new key and signed certificate. This certificate will be
@@ -29,7 +29,7 @@ method. If you need multiple certificates, please use the CLI option below.
 4. Click "Generate" at the bottom of the page. If you see an "Active Key" message,
 click "Revoke" to revoke it. You can then generate a new one.
 
-## CLI
+### CLI
 
 You can obtain a certificate directly through the CLI using the Vault client.
 You will need to provide your own (existing) SSH key to sign. On Windows, use
@@ -116,7 +116,8 @@ the SSH Portal, add:
 
 ### Windows/Putty
 
-Note: **Putty is not recommended**
+!!! note
+    Putty is not recommended.
 
 To connect with Putty, you will first need to convert your Key/Cert to Putty's
 PPK format. To do this:
