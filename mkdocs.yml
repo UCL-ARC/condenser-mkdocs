@@ -5,7 +5,7 @@ theme:
     - content.action.edit
 not_in_nav: |
   /stubs
-copyright: "UCL Advanced Research Computing, 2024"
+copyright: "UCL Advanced Research Computing, 2025"
 site_description: "Documentation for the UCL Condenser Platform"
 repo_url: https://github.com/UCL-ARC/condenser-mkdocs
 edit_uri: edit/main/docs/
