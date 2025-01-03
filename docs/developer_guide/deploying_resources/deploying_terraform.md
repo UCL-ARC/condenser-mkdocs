@@ -4,6 +4,15 @@ title: Deploying with Terraform
 
 # Deploying with Terraform
 
+You can use the [Terraform](https://developer.hashicorp.com/terraform) configuration
+language to automatically create and destroy virtual resources on Condenser. Hashicorp,
+the developer of Terraform, has produced extensive documentation and many [tutorials](https://developer.hashicorp.com/terraform/tutorials)
+for writing Terraform modules.
+
+Here we have created a short tutorial for writing and deploying a simple Terraform
+module that will use the Harvester Terraform [provider](https://developer.hashicorp.com/terraform/language/providers)
+to launch a small VM on Condenser. The VM is optionally configured for SSH access.
+
 ## Preparation
 
 1. Enable the UCL VPN
