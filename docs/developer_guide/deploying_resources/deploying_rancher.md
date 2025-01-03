@@ -4,6 +4,15 @@ title: Deploying with the Rancher GUI
 
 # Deploying with the Rancher GUI
 
+Condenser consists of several [Harvester](https://docs.harvesterhci.io/v1.2/) clusters.
+Harvester runs on [Kubernetes](https://kubernetes.io/); therefore each cluster is
+a specialized Kubernetes cluster. [Rancher](https://www.rancher.com/) is used to
+control access to the clusters, and provides a GUI which is accessible within the
+UCL network.
+
+This tutorial demonstrates how to use the GUI to launch a VM on Condenser which
+is accessible by SSH.
+
 ## Navigate to the cluster where your tenancy is assigned
 
 1. Enable the UCL VPN
@@ -21,7 +30,7 @@ wish to access, e.g. `sl-p01`
 with a passphrase
 2. Copy the contents of your public key onto your clipboard
 3. In the Rancher GUI, from the menu at left, select **Advanced** > **SSH Keys**
-4. On the SSH Keys page, click on **Create** in the upper right
+4. On the **SSH Keys** page, click on **Create** in the upper right
 5. Select your tenancy namespace
 6. Enter an appropriate name for your SSH key
 7. Paste the contents of your public key into the text box under **Basics**
@@ -34,10 +43,10 @@ with a passphrase
 3. Select your tenancy namespace
 4. Name the VM
 5. In the VM submenu, select **Networks**
-6. From the Network drop-down menu, select your tenancy network
+6. From the **Network** drop-down menu, select your tenancy network
 7. In the VM submenu, select **Volumes**
 8. Select the appropriate image (e.g., `harvester-public/almalinux-9.4-20240805`)
-9. Increase the Size to 50 GB
+9. Increase the **Size** to 50 GB
 10. In the VM submenu, select **Basics**
 11. Increase the **CPU** setting to 2
 12. Increase the **Memory** to 8 GiB
@@ -64,8 +73,8 @@ box and select the appropriate template
 
 1. From the menu at left, select **Virtual Machines**
 2. Identify the VM that you just launched in the list
-3. Wait for the IP address to appear, then copy it (the IP address will begin with
-`10.134`)
+3. Wait for the IP address to appear, then copy it. The IP address will begin with
+`10.134`.
 4. Follow these instructions to [access the VM with SSH](../../end_user_guide/ssh.md)
 
 ## Change a VM's state
