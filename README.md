@@ -8,7 +8,7 @@ Documentation for the Condenser platform at UCL.
 
 ## Contributing
 
-We welcome contributions in the form of additions to the list of [example deployments](/docs/examples.md)
+We welcome contributions in the form of additions to the list of [example deployments](/docs/developer_guide/examples.md)
 and corrections. Please fork the repository, make your changes, and create a pull
 request to contribute.
 
