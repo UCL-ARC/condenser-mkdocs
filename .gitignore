@@ -1,2 +1,7 @@
 # ignore a python virtual environment
-/env-mkdocs**
+/env-material**
+
+# ignore the built site
+/site**
+
+.DS_Store
