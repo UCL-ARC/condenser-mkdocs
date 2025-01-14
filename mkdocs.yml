@@ -16,4 +16,4 @@ markdown_extensions:
   - admonition
   - pymdownx.highlight:
       anchor_linenums: true
-  - pymdownx.superfences
+- pymdownx.superfences
