@@ -1,17 +1,16 @@
-# Welcome to MkDocs
+---
+title: Home
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Condenser User Documentation
 
-## Commands
+Condenser is a private cloud platform for UCL. Condenser is developed and maintained
+by the Environments team of the [Advanced Research Computing Centre](https://www.ucl.ac.uk/advanced-research-computing/).
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+End users seeking documentation for products that run on Condenser need to refer
+to the developer of the application. This documentation does not cover products
+that run on the Condenser platform. However, we do maintain a [page on accessing
+VMs that run on Condenser by SSH](./end_user_guide/ssh.md).
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Developers can refer to our [Getting started page](./developer_guide/index.md) for
+general advice on deploying virtual resources on Condenser.
