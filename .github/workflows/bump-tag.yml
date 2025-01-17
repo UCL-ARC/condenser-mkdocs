@@ -21,6 +21,15 @@ jobs:
         fetch-depth: '0'
 
     - name: Bump version and push tag
+      id: tag
       uses: anothrNick/github-tag-action@v1.71.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: automatic-release
+      uses: softprops/action-gh-release@v2.2.1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        tag_name: ${{ steps.tag.outputs.new_tag }}
+        generate_release_notes: true
+        prerelease: false
