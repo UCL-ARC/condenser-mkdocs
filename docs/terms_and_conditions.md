@@ -51,8 +51,8 @@ service maintenance.
 ## Acknowledgement in Works
 
 We request that you acknowledge the use of the Condenser platform in any publications
-describing research that has used them, in any part. The following words should be
-used:
+describing research that was accomplished using your resources on Condenser. We suggest
+the following acknowledgement:
 
 > "The authors acknowledge the use of the UCL Condenser private cloud platform, and
 > associated support services, in the completion of this work".
