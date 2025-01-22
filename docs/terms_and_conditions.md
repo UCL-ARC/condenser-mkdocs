@@ -37,7 +37,7 @@ your data. We do not make contractual agreements about uptime or availability.
 Outages and data-loss events will be handled on a best-efforts basis within normal
 UCL working hours.
 
-### Resource Access by Support Staff
+### Resource Access by ARC Staff
 
 We will not access or change your resources without your consent, except in the following
 circumstances:
@@ -45,8 +45,7 @@ circumstances:
 - You contact us with a support issue and the resource is relevant to your request.
 - We have reason to believe your resource is relevant to investigating an on-going
 security incident.
-- In automated service processes, such as transfers between storage systems for
-service maintenance.
+- In automated services, such as transfers between storage systems for service maintenance.
 
 ## Acknowledgement in Works
 
@@ -55,4 +54,5 @@ describing research that was accomplished using your resources on Condenser. We 
 the following acknowledgement:
 
 > "The authors acknowledge the use of the UCL Condenser private cloud platform, and
-> associated support services, in the completion of this work".
+> the support of the UCL Centre for Advanced Research Computing, in the completion
+> of this work."
