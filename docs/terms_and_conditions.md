@@ -12,8 +12,8 @@ Condenser is a private cloud platform on which you may deploy virtual computing
 resources such as data volumes and virtual machines. In this document, we refer to
 these as your resources.
 
-The terms of service on Condenser will be described in more detail by a forthcoming
-User Guidance and Responsibilities document.
+The terms of service on Condenser will be described by a forthcoming User Guidance
+and Responsibilities document.
 
 ## Commercial Services
 
@@ -29,7 +29,7 @@ If you
 - or are suspected to be involved in a security incident,
 
 we may raise this with relevant UCL teams, such as the Information Security Group,
-or Human Resources. We may suspend your access to the platfrom until any relevant
+or Human Resources. We may suspend your access to the platform until any relevant
 processes have been completed.
 
 ## Your Resources and Data
@@ -45,7 +45,7 @@ UCL working hours.
 We will not access or change your resources without your consent, except in the following
 circumstances:
 
-- You contact us with a support issue and the resource is relevant to your request.
+- We require access to your resource to resolve a technical issue.
 - We have reason to believe your resource is relevant to investigating an on-going
 security incident.
 - In automated services, such as transfers between storage systems for service maintenance.
