@@ -8,9 +8,12 @@ All use of the Condenser platform is subject to the general [UCL Computing Regul
 
 The following terms also apply to the use of Condenser.
 
-Condenser is a private cloud platform on which developers deploy virtual computing
+Condenser is a private cloud platform on which you may deploy virtual computing
 resources such as data volumes and virtual machines. In this document, we refer to
 these as your resources.
+
+The terms of service on Condenser will be described in more detail by a forthcoming
+User Guidance and Responsibilities document.
 
 ## Commercial Services
 
