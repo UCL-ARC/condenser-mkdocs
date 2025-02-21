@@ -15,3 +15,17 @@ request to contribute.
 Please do not make requests for support through this repository.
 
 To format the documentation pages, please refer to the [Material for Mkdocs documentation](https://squidfunk.github.io/mkdocs-material/reference/).
+
+To build the site locally:
+
+``` sh
+git clone --depth 1 https://github.com/UCL-ARC/condenser-mkdocs.git
+cd condenser-mkdocs
+python -m venv mkdocs-material
+source mkdocs-material/bin/activate
+python -m pip install -r requirements.txt
+source mkdocs-material/bin/activate # You may need to run this again to ensure that the correct mkdocs executable is first on your $PATH
+mkdocs serve
+```
+
+The site will be served at: http://127.0.0.1:8000/
