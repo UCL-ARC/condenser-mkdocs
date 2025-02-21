@@ -20,83 +20,49 @@ is used to provide access to the cluster. Resource quotas are applied to the ten
 
 ## Cost
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<table>
+<tr>
+  <th>Resource</th>
+  <th></th>
+  <th>Quantity</th>
+  <th>Price (£ per year)</th>
+</tr>
+<tr>
+  <td>Compute</td>
+  <td>number of vCPU</td>
+  <td><input type="number" value="30" min="0" class="qty" id="qty_cpu"/></td>
+  <td><span id="text_price_cpu">0</span></td>
+</tr>
+<tr>
+  <td></td>
+  <td>additional RAM (number of MB per vCPU)</td>
+  <td><input type="number" value="2" min="0" class="qty" id="qty_ram"/></td>
+  <td><span id="text_price_ram">0</span></td>
+</tr>
+<tr>
+  <td></td>
+  <td>number of GPU</td>
+  <td><input type="number" value="1" min="0" class="qty" id="qty_gpu"/></td>
+  <td><span id="text_price_gpu">0</span></td>
+</tr>
+<tr>
+  <td>Storage</td>
+  <td>number of TB</td>
+  <td><input type="number" value="2" min="0" class="qty" id="qty_storage"/></td>
+  <td><span id="text_price_storage">0</span></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td>Total</td>
+  <td>£ <span id="total_value">0</span></td>
+</tr>
+</table>
+
 <noscript>
 This form is a simple JavaScript calculator. You have disabled scripts in your browser,
 so the form will not be functional. Please refer to the table below to estimate the
 cost.
 </noscript>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<div class="container mt-4">
-  <div class="row">
-    <div class="col-6 row-heading">
-       Item
-     </div>
-    <div class="col-3 row-heading">
-      Quantity
-    </div>
-     <div class="col-2 row-heading">
-      Price
-     </div>
-  </div>
-
-  <div class="row">
-    <div class="col-6">
-      1. Powdered white sugar (cups)
-    </div>
-    <div class="col-3">
-      <input type="number" value="0" class="qty" id="qty_sugar"/>
-    </div>
-    <div class="col-2">
-      <input type="number" readonly value="0" id="price_sugar"/>
-    </div>
-  </div>
-
-  <div class="row my-3">
-    <div class="col-6">
-      2. Butter salted (grams)
-    </div>
-    <div class="col-3">
-      <input type="number" value="0" class="qty" id="qty_butter"/>
-    </div>
-    <div class="col-2">
-      <input type="number" readonly value="0" id="price_butter"/>
-    </div>
-  </div>
-
-  <div class="row my-3">
-    <div class="col-6">
-      3. Eggs (count)
-    </div>
-    <div class="col-3">
-      <input type="number" class="qty" value="0" id="qty_eggs"/>
-    </div>
-    <div class="col-2">
-      <input type="number" readonly value="0" id="price_eggs"/>
-    </div>
-  </div>
-
-  <div class="row my-3">
-    <div class="col-6">
-      4. Vanilla extract (ml)
-    </div>
-    <div class="col-3">
-      <input type="number" class="qty" value="0" id="qty_vanilla"/>
-    </div>
-    <div class="col-2">
-      <input type="number" readonly value="0" id="price_vanilla"/>
-    </div>
-  </div>
-
-  <div class="row my-4">
-    <div class="col-9 text-right total">
-      Total
-    </div>
-
-    <div class="col-2 total-val">
-      <span id="total_value">0</span>
-    </div>
-  </div>
-
-</div>

@@ -18,7 +18,5 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences
-extra_css:
-  - stylesheets/extra.css
 extra_javascript:
   - javascripts/cost-estimator.js
