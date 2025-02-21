@@ -98,6 +98,14 @@ Status:
 Events:                <none>
 ```
 
+Or, like so:
+
+``` sh
+kubectl get virtualmachineimage --selector='harvesterhci.io/imageDisplayName=almalinux-9.4-20240507' -A -o json | jq '.items[0].status.storageClassName'
+Warning: Use tokens from the TokenRequest API or manually created secret-based tokens instead of auto-generated secret-based tokens.
+"longhorn-image-mb9nd"
+```
+
 ## Describing the VM
 
 `vm.yaml`
