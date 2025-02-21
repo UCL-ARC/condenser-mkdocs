@@ -31,8 +31,10 @@ arc-general-ns                           Active   204d
 You can also use `kubectl apply` to deploy resources.
 
 Kubernetes deployments are described by yaml files. The following files describe
-a root block device and a virtual machine like that created in the [Rancher GUI](./deploying_rancher.md)
-and [Terraform](./deploying_terraform.md) tutorials:
+a deployment like that created in the [Rancher GUI](./deploying_rancher.md)
+and [Terraform](./deploying_terraform.md) tutorials. In those tutorials, Harvester
+automatically deployed a volume to serve as the root block device for the VM. Here
+we will need to deploy it manually.
 
 ## Describing the root block device
 
@@ -101,7 +103,7 @@ Events:                <none>
 Or, like so:
 
 ``` sh
-kubectl get virtualmachineimage --selector='harvesterhci.io/imageDisplayName=almalinux-9.4-20240507' -A -o json | jq '.items[0].status.storageClassName'
+$ kubectl get virtualmachineimage --selector='harvesterhci.io/imageDisplayName=almalinux-9.4-20240507' -A -o json | jq '.items[0].status.storageClassName'
 Warning: Use tokens from the TokenRequest API or manually created secret-based tokens instead of auto-generated secret-based tokens.
 "longhorn-image-mb9nd"
 ```
@@ -169,11 +171,14 @@ spec:
 ```
 
 The highlighted lines indicate where you may need to alter the deployment.
-In particular, you need to add your ssh public key to the cloudinit data.
+In particular, you need to add your ssh public key to the cloudinit data. The claimName
+field needs to correspond to the name of the PersistentVolumeClaim that you use to
+provide the root block device.
 
 ## Deploying
 
-Deploy these resources as follows:
+Create the files described above (`pvc.yaml` and `vm.yaml`).
+Then deploy these resources as follows:
 
 ``` sh
 kubectl apply -f pvc.yaml
@@ -189,7 +194,7 @@ NAME           AGE    PHASE     IP            NODENAME          READY
 demo-kubectl   58m    Running   10.134.X.X    harvester-2rbw7   True
 ```
 
-Then you can [log in](../../../end_user_guide.md), etc.
+Then you can [log in](../../../end_user_guide/ssh), etc.
 
 ## Destroying
 
