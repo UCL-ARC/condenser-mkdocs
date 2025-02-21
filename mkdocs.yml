@@ -12,6 +12,7 @@ edit_uri: edit/main/docs/
 site_url: https://docs.condenser.arc.ucl.ac.uk
 plugins:
   - git-revision-date-localized
+  - search
 markdown_extensions:
   - admonition
   - pymdownx.highlight:
