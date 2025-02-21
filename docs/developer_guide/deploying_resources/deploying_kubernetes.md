@@ -198,7 +198,7 @@ Then you can [log in](../../end_user_guide/ssh.md), etc.
 
 ## Destroying
 
-First destroy the VM, then the pvc:
+First delete the VM, then the pvc:
 
 ``` sh
 kubectl delete -f vm.yaml
