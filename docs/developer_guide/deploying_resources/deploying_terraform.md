@@ -78,10 +78,10 @@ data "harvester_image" "img" {
 }
 
 resource "harvester_virtualmachine" "vm" {
-  name        = "my-vm"
+  name        = "demo"
   namespace   = var.namespace
   description = "Demo VM"
-  hostname    = "my-vm"
+  hostname    = "demo"
 
   cpu    = 2
   memory = "8Gi"

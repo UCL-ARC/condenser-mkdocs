@@ -41,7 +41,7 @@ with a passphrase
 1. From the menu at left, select **Virtual Machines**
 2. Click **Create** in the upper right
 3. Select your tenancy namespace
-4. Name the VM
+4. Name the VM (e.g., `demo`)
 5. In the VM submenu, select **Networks**
 6. From the **Network** drop-down menu, select your tenancy network
 7. In the VM submenu, select **Volumes**
