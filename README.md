@@ -17,7 +17,7 @@ Please do not make requests for support through this repository.
 
 ### Building the site locally
 
-To build the site locally:
+To preview the site locally:
 
 ``` sh
 git clone --depth 1 https://github.com/UCL-ARC/condenser-mkdocs.git
