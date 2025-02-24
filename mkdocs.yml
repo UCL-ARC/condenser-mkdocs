@@ -19,4 +19,4 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.superfences
 extra_javascript:
-  - javascripts/cost-estimator.js
+  - javascripts/quote-calculator.js
