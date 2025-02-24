@@ -1,10 +1,11 @@
 function calculateTotal()
 {
   let unit_price={
-    cpu: 22,
-    ram: 12,
-    gpu: 2,
-    storage:43
+    cpu: 10,
+    ram: 11,
+    gpua: 12,
+    gpub: 13,
+    storage: 14
   };
   let item_price={}
 
@@ -16,15 +17,23 @@ function calculateTotal()
   $("#price_ram").val(item_price.ram);
   $("#text_price_ram").text(item_price.ram);
 
-  item_price.gpu = ($("#qty_gpu").val() * unit_price.gpu )
-  $("#price_gpu").val(item_price.gpu);
-  $("#text_price_gpu").text(item_price.gpu);
+  item_price.gpua = ($("#qty_gpua").val() * unit_price.gpua )
+  $("#price_gpua").val(item_price.gpua);
+  $("#text_price_gpua").text(item_price.gpua);
+
+  item_price.gpub = ($("#qty_gpub").val() * unit_price.gpub )
+  $("#price_gpub").val(item_price.gpub);
+  $("#text_price_gpub").text(item_price.gpub);
 
   item_price.storage = ($("#qty_storage").val() * unit_price.storage )
   $("#price_storage").val(item_price.storage);
   $("#text_price_storage").text(item_price.storage);
 
-  let total = item_price.cpu + item_price.ram + item_price.gpu + item_price.storage;
+  let total = item_price.cpu
+              + item_price.ram
+              + item_price.gpua
+              + item_price.gpub
+              + item_price.storage;
 
   $("#total_value").text(total);
 
