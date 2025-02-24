@@ -36,8 +36,8 @@ The site will be served at: <http://127.0.0.1:8000/>
 ### Versioning
 
 Incrementing the version number is managed automatically through Github Actions.
-When making a merge commit, include one of `#major` `#minor` or `#patch` in the commit
-message to trigger them. The workflows default to minor increments.
+When making a merge commit, include one of `#major`, `#minor`, or `#patch` in the
+commit message to trigger them. The workflows default to minor increments.
 
 The rough convention for versioning is:
 
