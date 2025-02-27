@@ -17,7 +17,7 @@ and Responsibilities document.
 
 ## Sensitive information
 
-Condenser is not suitable for storing or processing sensitive data.
+Condenser is not currently suitable for storing or processing sensitive data.
 
 ## Commercial Services
 
