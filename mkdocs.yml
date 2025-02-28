@@ -13,6 +13,8 @@ site_url: https://docs.condenser.arc.ucl.ac.uk
 plugins:
   - git-revision-date-localized
   - search
+  - blog:
+      post_date_format: long
 markdown_extensions:
   - admonition
   - pymdownx.highlight:
