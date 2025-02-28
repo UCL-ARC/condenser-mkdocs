@@ -15,9 +15,13 @@ these as your resources.
 The terms of service on Condenser will be described by a forthcoming User Guidance
 and Responsibilities document.
 
+## Sensitive information
+
+Condenser is not currently suitable for storing or processing sensitive data.
+
 ## Commercial Services
 
-It is not permitted to provide commercial services from our platform.
+It is not permitted to provide commercial services from Condenser.
 
 ## Access Suspension
 
