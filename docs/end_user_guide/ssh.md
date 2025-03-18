@@ -16,9 +16,7 @@ be prompted more often than usual.
 
 ## Getting a Certificate
 
-### Web Interface
-
-You can quickly generate a new certificate without using the command line. The
+You can quickly generate a new certificate through the web interface. The
 Portal will generate a new key and signed certificate. This certificate will be
 valid for 7 days. You can only have *one* active certificate at a time using this
 method. If you need multiple certificates, please use the CLI option below.
@@ -28,39 +26,6 @@ method. If you need multiple certificates, please use the CLI option below.
 3. Sign in with your UCL credentials (this should happen automatically)
 4. Click "Generate" at the bottom of the page. If you see an "Active Key" message,
 click "Revoke" to revoke it. You can then generate a new one.
-
-### CLI
-
-You can obtain a certificate directly through the CLI using the Vault client.
-You will need to provide your own (existing) SSH key to sign. On Windows, use
-[PuttyGen](https://www.puttygen.com) to create a key. On Linux/Mac OS WSL,
-you can use:
-
-``` sh
-ssh-keygen -t ed25519
-```
-
-To generate a certificate:
-
-1. Install the [Vault client](
-https://developer.hashicorp.com/vault/install?product_intent=vault)
-2. Set the `VAULT_ADDR` environment variable to `https://vault.arc.ucl.ac.uk`
-(you may wish to add this to your local environment)
-3. Connect to the ISD VPN
-4. Login to Vault:
-
-   ``` sh
-   vault login -method=oidc
-   ```
-
-5. Generate a certificate:
-
-   ``` sh
-   vault write -field=signed_key ssh-environments-ingress/sign/cloud-user \
-   public_key=@/home/user/.ssh/id_ed25519.pub >  ~/.ssh/id_arc.signed
-   ```
-
-(change `/home/user/.ssh/id_ed25519.pub` to the location of your own public key)
 
 ## Connecting
 
