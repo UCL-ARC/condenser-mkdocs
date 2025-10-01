@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Export the diagram as SVG for the MacOS draw.io app
+/Applications/draw.io.app/Contents/MacOS/draw.io --export --format svg --border 10 $1
