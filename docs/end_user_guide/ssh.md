@@ -11,15 +11,14 @@ to another host on Condenser.
 
 To access SSH, you will need to have [setup MFA](
 https://www.ucl.ac.uk/isd/services/stay-secure/multi-factor-authentication-mfa)
-on your UCL account. Both options below have enhanced MFA requirements, so you may
-be prompted more often than usual.
+on your UCL account.
 
 ## Getting a Certificate
 
 You can quickly generate a new certificate through the web interface. The
 Portal will generate a new key and signed certificate. This certificate will be
 valid for 7 days. You can only have *one* active certificate at a time using this
-method. If you need multiple certificates, please use the CLI option below.
+method.
 
 1. Connect to the UCL VPN
 2. Go to the [SSH Portal](https://ssh.condenser.arc.ucl.ac.uk)
@@ -29,10 +28,9 @@ click "Revoke" to revoke it. You can then generate a new one.
 
 ## Connecting
 
-### Linux/Mac OS/WSL
+### Linux and Mac OS
 
-Windows users will need to first install and set up [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install).
-Then the following instructions can be followed from your preferred shell in your
+The following instructions can be followed from your preferred shell in your
 command line interface.
 
 1. Add a Host to your `~/.ssh/config`. If you generated the certificate using
@@ -82,3 +80,5 @@ the SSH Portal, add:
     ```
 
     To always jump through the bastion for these hosts.
+
+### Windows
