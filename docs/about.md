@@ -21,4 +21,4 @@ tenants on the same cluster. Each tenancy is also provided with a network.
 Resource quotas (CPU, RAM, and data storage) are applied at the tenancy level,
 rather than to individual users.
 
-![Tenancy diagram](../assets/condenser-tenancy.svg)
+![Tenancy diagram](assets/condenser-tenancy.svg)
