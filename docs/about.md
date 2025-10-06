@@ -20,3 +20,5 @@ A tenancy is provided with a namespace to isolate their resources from neighbor
 tenants on the same cluster. Each tenancy is also provided with a network.
 Resource quotas (CPU, RAM, and data storage) are applied at the tenancy level,
 rather than to individual users.
+
+![Tenancy diagram](../assets/condenser-tenancy.svg)
