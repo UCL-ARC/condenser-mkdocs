@@ -46,5 +46,7 @@ responsible for the following tasks, when they are applicable:
 - Using up-to-date operating systems for your virtual machines
 - Configuring security features in your virtual resources and application software,
   such as configuring the firewall in your virtual machines
+- Securing your environment to professional standards for the storage and
+  processing of sensitive data
 - Keeping your data safe by using external version control and backups
 - Supporting third-party users in their access to and use of your application

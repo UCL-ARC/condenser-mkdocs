@@ -22,3 +22,11 @@ Resource quotas (CPU, RAM, and data storage) are applied at the tenancy level,
 rather than to individual users.
 
 ![Tenancy diagram](assets/condenser-tenancy.svg)
+
+## Sensitive data
+
+As a platform, Condenser is not certified for the secure storage and processing
+of sensitive data. However, it is possible to build a secure environment for
+on the platform. Please consult with us during onboarding, and
+plan to collaborate with a Research Data Engineer when planning projects with
+sensitive data on Condenser.
