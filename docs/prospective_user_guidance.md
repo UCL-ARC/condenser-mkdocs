@@ -21,22 +21,24 @@ responsible for:
 - Updating the platform software
 - Implementing platform-level security measures, such as role-based access control,
   tenant isolation, and SSH certificate registration
-- Implementing and amending tenancy quotas
-- Maintaining the clusters to a standard such that users can deploy virtual machines,
-  data volumes, networks, and other resources within their tenancy quota
 - Maintaining access from the platform to the internet
 - Making up-to-date OS images available on the platform
 - Maintaining platform features such as SSH access and web ingress for virtual machines
 - Creating and updating documentation for the Condenser platform
 - Onboarding new users
+- Provisioning new tenancies
+- Implementing and amending tenancy quotas
+- Maintaining the clusters to a standard such that users can deploy virtual machines,
+  data volumes, networks, and other resources within their tenancy quota
 - Supporting users in their access to and normal use of the platform through UCL
   MyServices
 
-## Your responsibilities
+## Developing on Condenser
 
-To enable your project to succeed on Condenser, please ensure that your team includes
-staff with the appropriate skills and time to support the project. Users are
-responsible for the following tasks, when they are applicable:
+Condenser provides a platform for your team to build on. To enable your project
+to succeed on Condenser, please ensure that your team includes staff with the appropriate
+skills and time to support the project. Depending on the nature of your project,
+your team may need to be able to do the following tasks:
 
 - Developing and configuring your project's application software
 - Deploying virtual machines, data volumes, and networks (your virtual resources)
