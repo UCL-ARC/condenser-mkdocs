@@ -17,7 +17,7 @@ can deploy virtual machines and related resources with [Harvester](https://docs.
 [Rancher](https://rancher.com/docs/) is used to provide access to the cluster.
 
 A tenancy is provided with a namespace to isolate their resources from neighbor
-tenants on the same cluster. Each tenancy is also provided with a network.
+tenants on the same cluster. Each tenancy is also provided with an isolated network.
 Resource quotas (CPU, RAM, and data storage) are applied at the tenancy level,
 rather than to individual users.
 
