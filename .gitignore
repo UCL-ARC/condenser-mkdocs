@@ -4,4 +4,7 @@
 # ignore the built site
 /site**
 
+# ignore drawio backup files
+**/*.drawio.bkp
+
 .DS_Store

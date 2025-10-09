@@ -11,9 +11,22 @@ All hardware resides in UCL facilities.
 
 ## Tenancy
 
-Access to Condenser is organized in tenant groups. Tenants are responsible for
-managing their users and virtual resources. Members of a tenancy are provided with
-access to a [Kubernetes](https://kubernetes.io/docs/home/)
-cluster. Members can deploy virtual machines and related cloud-computing resources
-with [Harvester](https://docs.harvesterhci.io). [Rancher](https://rancher.com/docs/)
-is used to provide access to the cluster. Resource quotas are applied to the tenancy.
+Access to Condenser is organized according to tenancies. Users in a tenancy are
+provided with access to a [Kubernetes](https://kubernetes.io/docs/home/) cluster.
+Users can deploy virtual machines and related resources with [Harvester](https://docs.harvesterhci.io).
+[Rancher](https://rancher.condenser.arc.ucl.ac.uk/dashboard/) is used to provide
+access to the cluster.
+
+A tenancy is provided with a namespace to isolate their resources from neighbor
+tenants on the same cluster. Each tenancy is also provided with an isolated network.
+Resource quotas (CPU, RAM, and data storage) are applied at the tenancy level,
+rather than to individual users.
+
+![Tenancy diagram](assets/condenser-tenancy.svg)
+
+## Sensitive data
+
+As a platform, Condenser is not certified for the secure storage and processing
+of sensitive data. However, it is possible to build a secure environment on the
+platform. Please consult with us during onboarding, and plan to collaborate with
+a Research Data Engineer when planning projects with sensitive data on Condenser.
