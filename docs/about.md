@@ -11,10 +11,11 @@ All hardware resides in UCL facilities.
 
 ## Tenancy
 
-Access to Condenser is organized according to tenancies. Users in a tenancy are provided
-with access to a [Kubernetes](https://kubernetes.io/docs/home/) cluster. Users
-can deploy virtual machines and related resources with [Harvester](https://docs.harvesterhci.io).
-[Rancher](https://rancher.com/docs/) is used to provide access to the cluster.
+Access to Condenser is organized according to tenancies. Users in a tenancy are
+provided with access to a [Kubernetes](https://kubernetes.io/docs/home/) cluster.
+Users can deploy virtual machines and related resources with [Harvester](https://docs.harvesterhci.io).
+[Rancher](https://rancher.condenser.arc.ucl.ac.uk/dashboard/) is used to provide
+access to the cluster.
 
 A tenancy is provided with a namespace to isolate their resources from neighbor
 tenants on the same cluster. Each tenancy is also provided with an isolated network.
