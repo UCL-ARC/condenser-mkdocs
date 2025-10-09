@@ -26,7 +26,6 @@ rather than to individual users.
 ## Sensitive data
 
 As a platform, Condenser is not certified for the secure storage and processing
-of sensitive data. However, it is possible to build a secure environment for
-on the platform. Please consult with us during onboarding, and
-plan to collaborate with a Research Data Engineer when planning projects with
-sensitive data on Condenser.
+of sensitive data. However, it is possible to build a secure environment on the
+platform. Please consult with us during onboarding, and plan to collaborate with
+a Research Data Engineer when planning projects with sensitive data on Condenser.
