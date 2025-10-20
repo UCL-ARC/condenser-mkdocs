@@ -242,7 +242,7 @@ print it again.
 
 For VMs created from an Almalinux image, the username will be `almalinux`.
 
-Follow these instructions to [access the VM with SSH](../../end_user_guide/ssh.md).
+Follow these instructions to [access the VM with SSH](../../ssh_login.md).
 
 ## Destroy the VM
 
