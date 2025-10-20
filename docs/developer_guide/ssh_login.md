@@ -1,8 +1,8 @@
 ---
-title: Accessing a VM by SSH
+title: Logging into a VM by SSH
 ---
 
-# Accessing a VM by SSH
+# Logging into a VM by SSH
 
 All SSH access to Condenser must be routed through our SSH bastion,
 `ssh.condenser.arc.ucl.ac.uk`. This bastion does not act like a traditional
@@ -113,28 +113,3 @@ the SSH Portal, add:
     ```
 
     To always jump through the bastion for these hosts.
-
-### Windows/Putty
-
-!!! note
-    Putty is not recommended.
-
-To connect with Putty, you will first need to convert your Key/Cert to Putty's
-PPK format. To do this:
-
-1. Open Putty Keygen
-2. Import your key by clicking "Load" and selecting your *private key* (id_arc).
-You may need to select "All Files" in the bottom of the dialogue box.
-3. Click "Key" in the top menu and select "Add certificate to key".
-4. Select "All Files" in the dialogue box and select your *signed certificate*
-(id_arc.signed).
-5. Click "Save private key" to save your private key in PPK format.
-6. Run Pageant
-7. Add your newly generated key to Pageant
-
-To then connect via SSH:
-
-1. Open Putty and configure your connection
-2. Expand "Connection -> Proxy"
-3. Set the proxy type to "SSH to proxy"
-4. Set the proxy hostname to "ssh.condenser.arc.ucl.ac.uk"
