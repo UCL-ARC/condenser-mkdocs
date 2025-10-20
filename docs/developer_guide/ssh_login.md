@@ -1,8 +1,8 @@
 ---
-title: Accessing a VM by SSH
+title: Logging into a VM by SSH
 ---
 
-# Accessing a VM by SSH
+# Logging into a VM by SSH
 
 All SSH access to Condenser must be routed through our SSH bastion,
 `ssh.condenser.arc.ucl.ac.uk`. This bastion does not act like a traditional
