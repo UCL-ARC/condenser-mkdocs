@@ -194,7 +194,7 @@ NAME           AGE    PHASE     IP            NODENAME          READY
 demo-kubectl   58m    Running   10.134.X.X    harvester-2rbw7   True
 ```
 
-Then you can [log in](../../end_user_guide/ssh.md), etc.
+Then you can [log in](../ssh_login.md), etc.
 
 ## Destroying
 

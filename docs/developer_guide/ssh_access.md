@@ -29,4 +29,4 @@ login enabled. The username varies depending on the base image of the VM.
 
 VMs are not typically configured to allow SSH login to the root account.
 
-Follow these instructions to [access a VM with SSH](../end_user_guide/ssh.md).
+Follow these instructions to [access a VM with SSH](ssh_login.md).
