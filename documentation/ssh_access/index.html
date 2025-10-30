@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.condenser.arc.ucl.ac.uk/developer_guide/ssh_login/">
+        <link rel="canonical" href="https://condenser.arc.ucl.ac.uk/documentation/ssh_access/">
       
       
-        <link rel="prev" href="../ssh_access/">
+        <link rel="prev" href="../examples/">
       
       
-        <link rel="next" href="../web_ingress/">
+        <link rel="next" href="../ssh_login/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Logging into a VM by SSH - Condenser User Documentation</title>
+        <title>Configuring a VM for SSH access - Condenser</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#logging-into-a-vm-by-ssh" class="md-skip">
+        <a href="#configuring-a-vm-for-ssh-access" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Condenser User Documentation" class="md-header__button md-logo" aria-label="Condenser User Documentation" data-md-component="logo">
+    <a href="../.." title="Condenser" class="md-header__button md-logo" aria-label="Condenser" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -96,13 +96,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Condenser User Documentation
+            Condenser
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Logging into a VM by SSH
+              Configuring a VM for SSH access
             
           </span>
         </div>
@@ -192,13 +192,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Condenser User Documentation" class="md-nav__button md-logo" aria-label="Condenser User Documentation" data-md-component="logo">
+    <a href="../.." title="Condenser" class="md-nav__button md-logo" aria-label="Condenser" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Condenser User Documentation
+    Condenser
   </label>
   
     <div class="md-nav__source">
@@ -328,7 +328,7 @@
   
   
   <span class="md-ellipsis">
-    Developer guide
+    Documentation
     
   </span>
   
@@ -339,7 +339,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Developer guide
+            Documentation
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -393,29 +393,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../ssh_access/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Configuring a VM for SSH access
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -428,20 +405,31 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
   
   
   <span class="md-ellipsis">
-    Logging into a VM by SSH
+    Configuring a VM for SSH access
     
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+      </a>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssh_login/" class="md-nav__link">
         
   
   
@@ -452,83 +440,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-a-certificate" class="md-nav__link">
-    <span class="md-ellipsis">
-      Getting a Certificate
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting a Certificate">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#web-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      Web Interface
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      CLI
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connecting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Connecting
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Connecting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#linuxmac-oswsl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Linux/Mac OS/WSL
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -699,71 +610,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-a-certificate" class="md-nav__link">
-    <span class="md-ellipsis">
-      Getting a Certificate
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting a Certificate">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#web-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      Web Interface
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      CLI
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connecting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Connecting
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Connecting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#linuxmac-oswsl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Linux/Mac OS/WSL
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -778,7 +624,7 @@
 
 
   
-    <a href="https://github.com/UCL-ARC/condenser-mkdocs/edit/main/docs/developer_guide/ssh_login.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/UCL-ARC/condenser-mkdocs/edit/main/docs/documentation/ssh_access.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -786,96 +632,46 @@
   
 
 
-<h1 id="logging-into-a-vm-by-ssh">Logging into a VM by SSH</h1>
-<p>All SSH access to Condenser must be routed through our SSH bastion,
-<code>ssh.condenser.arc.ucl.ac.uk</code>. This bastion does not act like a traditional
-login node, and instead only allows jumping (with the use of <code>ProxyJump</code> or <code>-J</code>)
-to another host on Condenser.</p>
-<p>To access SSH, you will need to have <a href="https://www.ucl.ac.uk/isd/services/stay-secure/multi-factor-authentication-mfa">setup MFA</a>
-on your UCL account. Both options below have enhanced MFA requirements, so you may
-be prompted more often than usual.</p>
-<h2 id="getting-a-certificate">Getting a Certificate</h2>
-<h3 id="web-interface">Web Interface</h3>
-<p>You can quickly generate a new certificate without using the command line. The
-Portal will generate a new key and signed certificate. This certificate will be
-valid for 7 days. You can only have <em>one</em> active certificate at a time using this
-method. If you need multiple certificates, please use the CLI option below.</p>
-<ol>
-<li>Connect to the UCL VPN</li>
-<li>Go to the <a href="https://ssh.condenser.arc.ucl.ac.uk">SSH Portal</a></li>
-<li>Sign in with your UCL credentials (this should happen automatically)</li>
-<li>Click "Generate" at the bottom of the page. If you see an "Active Key" message,
-click "Revoke" to revoke it. You can then generate a new one.</li>
-</ol>
-<h3 id="cli">CLI</h3>
-<p>You can obtain a certificate directly through the CLI using the Vault client.
-You will need to provide your own (existing) SSH key to sign. On Windows, use
-<a href="https://www.puttygen.com">PuttyGen</a> to create a key. On Linux/Mac OS WSL,
-you can use:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519
+<h1 id="configuring-a-vm-for-ssh-access">Configuring a VM for SSH access</h1>
+<p>To be accessible by SSH, a VM needs to be configured with a <a href="https://docs.harvesterhci.io/v1.2/networking/harvester-network/">VLAN Network</a>
+and the SSH public key data needs to be provided via <a href="https://cloudinit.readthedocs.io/en/latest/reference/modules.html#ssh">cloudinit</a>.
+We have documentation demonstrating this for <a href="../deploying_resources/deploying_terraform/#configure-the-vm-for-ssh-access">Terraform deployments</a>
+and for the <a href="../deploying_resources/deploying_rancher/">Rancher GUI</a>.</p>
+<p>After the VM is configured, the IP address for the VM can be found in the Rancher
+GUI or by using <code>kubectl</code> with a suitable <a href="../../stubs/kubeconfig/">kubeconfig file</a>
+and the name of the namespace where the VM is deployed:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>virtualmachineinstance.kubevirt.io<span class="w"> </span>--namespace<span class="w"> </span>my-ns
 </code></pre></div>
-<p>To generate a certificate:</p>
-<ol>
-<li>Install the <a href="https://developer.hashicorp.com/vault/install?product_intent=vault">Vault client</a></li>
-<li>Set the <code>VAULT_ADDR</code> environment variable to <code>https://vault.arc.ucl.ac.uk</code>
-(you may wish to add this to your local environment)</li>
-<li>Connect to the ISD VPN</li>
-<li>Login to Vault:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>vault<span class="w"> </span>login<span class="w"> </span>-method<span class="o">=</span>oidc
-</code></pre></div>
-<ol>
-<li>Generate a certificate:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>vault<span class="w"> </span>write<span class="w"> </span>-field<span class="o">=</span>signed_key<span class="w"> </span>ssh-environments-ingress/sign/cloud-user<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">public_key</span><span class="o">=</span>@/home/user/.ssh/id_ed25519.pub<span class="w"> </span>&gt;<span class="w">  </span>~/.ssh/id_arc.signed
-</code></pre></div>
-<p>(change <code>/home/user/.ssh/id_ed25519.pub</code> to the location of your own public key)</p>
-<h2 id="connecting">Connecting</h2>
-<h3 id="linuxmac-oswsl">Linux/Mac OS/WSL</h3>
-<ol>
-<li>
-<p>Add a Host to your <code>~/.ssh/config</code>. If you generated the certificate using
-the SSH Portal, add:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Host<span class="w"> </span>condenser
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>HostName<span class="w"> </span>ssh.condenser.arc.ucl.ac.uk
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>User<span class="w"> </span>cloud-user
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>CertificateFile<span class="w"> </span>~/.ssh/id_arc.signed
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span>IdentityFile<span class="w"> </span>~/.ssh/id_arc
-</code></pre></div>
-<p>If you generated your certificate using Vault directly with your
-own key, add:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Host<span class="w"> </span>condenser
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>HostName<span class="w"> </span>ssh.condenser.arc.ucl.ac.uk
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span>User<span class="w"> </span>cloud-user
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span>CertificateFile<span class="w"> </span>~/.ssh/id_arc.signed
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span>IdentityFile<span class="w"> </span>~/.ssh/id_ed25519
-</code></pre></div>
-<p>Ensure that <code>CertificateFile</code> matches the filename you saved your
-certificate as in [5] above, and <code>IdentityFile</code> is the private key matching
-the public key provided to Vault.</p>
-</li>
-<li>
-<p>Connect to the UCL VPN</p>
-</li>
-<li>
-<p>Connect via SSH to your machine running on Condenser using <code>-J condenser</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ssh<span class="w"> </span>-J<span class="w"> </span>condenser<span class="w"> </span>username@10.134.X.X
-</code></pre></div>
-<p>Contact the developer responsible for the VM for the correct username and IP
-address.</p>
-</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>To avoid having to use <code>-J condenser</code> every time, you can define a ProxyJump
-in your <code>~/.ssh/config</code>. For example, if your servers are <code>*.your-subnet.condenser.ucl.ac.uk</code>,
-add the following:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Host<span class="w"> </span>*.your-subnet.condenser.arc.ucl.ac.uk
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span>ProxyJump<span class="w"> </span>condenser
-</code></pre></div>
-<p>To always jump through the bastion for these hosts.</p>
-</div>
+<p>The VM's base image will typically be configured with a default username with SSH
+login enabled. The username varies depending on the base image of the VM.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Image OS</th>
+<th style="text-align: left;">Default SSH username</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">RHEL</td>
+<td style="text-align: left;"><code>cloud-user</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Almalinux</td>
+<td style="text-align: left;"><code>almalinux</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Ubuntu</td>
+<td style="text-align: left;"><code>ubuntu</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Debian</td>
+<td style="text-align: left;"><code>debian</code></td>
+</tr>
+</tbody>
+</table>
+<p>VMs are not typically configured to allow SSH login to the root account.</p>
+<p>Follow these instructions to <a href="../ssh_login/">access a VM with SSH</a>.</p>
 
 
 
@@ -896,7 +692,7 @@ add the following:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 20, 2025 15:11:00 UTC">October 20, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 30, 2025 15:40:03 UTC">October 30, 2025</span>
   </span>
 
     

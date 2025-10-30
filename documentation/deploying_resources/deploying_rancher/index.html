@@ -10,25 +10,25 @@
       
       
       
-        <link rel="canonical" href="https://docs.condenser.arc.ucl.ac.uk/developer_guide/examples/">
+        <link rel="canonical" href="https://condenser.arc.ucl.ac.uk/documentation/deploying_resources/deploying_rancher/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../deploying_kubernetes/">
       
       
-        <link rel="next" href="../ssh_access/">
+        <link rel="next" href="../deploying_terraform/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>Examples - Condenser User Documentation</title>
+        <title>Deploying with the Rancher GUI - Condenser</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
       
       
 
@@ -47,7 +47,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#examples" class="md-skip">
+        <a href="#deploying-with-the-rancher-gui" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Condenser User Documentation" class="md-header__button md-logo" aria-label="Condenser User Documentation" data-md-component="logo">
+    <a href="../../.." title="Condenser" class="md-header__button md-logo" aria-label="Condenser" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -96,13 +96,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Condenser User Documentation
+            Condenser
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Examples
+              Deploying with the Rancher GUI
             
           </span>
         </div>
@@ -192,13 +192,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Condenser User Documentation" class="md-nav__button md-logo" aria-label="Condenser User Documentation" data-md-component="logo">
+    <a href="../../.." title="Condenser" class="md-nav__button md-logo" aria-label="Condenser" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Condenser User Documentation
+    Condenser
   </label>
   
     <div class="md-nav__source">
@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -244,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   
@@ -266,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../prospective_user_guidance/" class="md-nav__link">
+      <a href="../../../prospective_user_guidance/" class="md-nav__link">
         
   
   
@@ -288,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../terms_and_conditions/" class="md-nav__link">
+      <a href="../../../terms_and_conditions/" class="md-nav__link">
         
   
   
@@ -328,7 +328,7 @@
   
   
   <span class="md-ellipsis">
-    Developer guide
+    Documentation
     
   </span>
   
@@ -339,7 +339,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Developer guide
+            Documentation
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -350,12 +350,167 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Getting started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ssh_access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuring a VM for SSH access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ssh_login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logging into a VM by SSH
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web_ingress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuring a VM for web ingress
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deploying resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Deploying resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying_kubernetes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deploying with kubectl
     
   </span>
   
@@ -387,7 +542,7 @@
   
   
   <span class="md-ellipsis">
-    Examples
+    Deploying with the Rancher GUI
     
   </span>
   
@@ -400,7 +555,7 @@
   
   
   <span class="md-ellipsis">
-    Examples
+    Deploying with the Rancher GUI
     
   </span>
   
@@ -423,50 +578,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#modules" class="md-nav__link">
+  <a href="#navigate-to-the-cluster-where-your-tenancy-is-assigned" class="md-nav__link">
     <span class="md-ellipsis">
-      Modules
+      Navigate to the cluster where your tenancy is assigned
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ucl-arcterraform-harvester-modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      UCL-ARC/terraform-harvester-modules
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#deployments" class="md-nav__link">
+  <a href="#register-your-ssh-key" class="md-nav__link">
     <span class="md-ellipsis">
-      Deployments
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Deployments">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ucl-arcterraform-harvester-vm-demo" class="md-nav__link">
-    <span class="md-ellipsis">
-      UCL-ARC/terraform-harvester-vm-demo
+      Register your SSH key
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#launch-a-virtual-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launch a Virtual Machine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save-a-vm-configuration-as-a-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Save a VM configuration as a template
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-in-to-the-vm-with-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log in to the VM with SSH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-a-vms-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change a VM's state
+    </span>
+  </a>
   
 </li>
       
@@ -486,160 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ssh_access/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Configuring a VM for SSH access
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ssh_login/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Logging into a VM by SSH
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../web_ingress/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Configuring a VM for web ingress
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Deploying resources
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_6">
-            <span class="md-nav__icon md-icon"></span>
-            Deploying resources
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../deploying_resources/deploying_kubernetes/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Deploying with kubectl
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../deploying_resources/deploying_rancher/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Deploying with the Rancher GUI
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../deploying_resources/deploying_terraform/" class="md-nav__link">
+      <a href="../deploying_terraform/" class="md-nav__link">
         
   
   
@@ -697,50 +705,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#modules" class="md-nav__link">
+  <a href="#navigate-to-the-cluster-where-your-tenancy-is-assigned" class="md-nav__link">
     <span class="md-ellipsis">
-      Modules
+      Navigate to the cluster where your tenancy is assigned
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ucl-arcterraform-harvester-modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      UCL-ARC/terraform-harvester-modules
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#deployments" class="md-nav__link">
+  <a href="#register-your-ssh-key" class="md-nav__link">
     <span class="md-ellipsis">
-      Deployments
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Deployments">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ucl-arcterraform-harvester-vm-demo" class="md-nav__link">
-    <span class="md-ellipsis">
-      UCL-ARC/terraform-harvester-vm-demo
+      Register your SSH key
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#launch-a-virtual-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launch a Virtual Machine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save-a-vm-configuration-as-a-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Save a VM configuration as a template
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-in-to-the-vm-with-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log in to the VM with SSH
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-a-vms-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change a VM's state
+    </span>
+  </a>
   
 </li>
       
@@ -760,7 +774,7 @@
 
 
   
-    <a href="https://github.com/UCL-ARC/condenser-mkdocs/edit/main/docs/developer_guide/examples.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/UCL-ARC/condenser-mkdocs/edit/main/docs/documentation/deploying_resources/deploying_rancher.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -768,16 +782,89 @@
   
 
 
-<h1 id="examples">Examples</h1>
-<h2 id="modules">Modules</h2>
-<p>These repositories contain <a href="https://developer.hashicorp.com/terraform/language/modules">modules</a> that
-have been developed for use in deployments on Condenser.</p>
-<h3 id="ucl-arcterraform-harvester-modules"><a href="https://github.com/UCL-ARC/terraform-harvester-modules">UCL-ARC/terraform-harvester-modules</a></h3>
-<p>This repository contains several useful modules for deploying virtual machines and k3s-based kubernetes clusters.</p>
-<h2 id="deployments">Deployments</h2>
-<p>These repositories describe complete deployments for Condenser.</p>
-<h3 id="ucl-arcterraform-harvester-vm-demo"><a href="https://github.com/UCL-ARC/terraform-harvester-vm-demo">UCL-ARC/terraform-harvester-vm-demo</a></h3>
-<p>A basic VM configured for SSH access.</p>
+<h1 id="deploying-with-the-rancher-gui">Deploying with the Rancher GUI</h1>
+<p>Condenser consists of several <a href="https://docs.harvesterhci.io/v1.2/">Harvester</a> clusters.
+Harvester runs on <a href="https://kubernetes.io/">Kubernetes</a>; therefore each cluster is
+a specialized Kubernetes cluster. <a href="https://www.rancher.com/">Rancher</a> is used to
+control access to the clusters, and provides a GUI which is accessible within the
+UCL network.</p>
+<p>This tutorial demonstrates how to use the GUI to launch a VM on Condenser which
+is accessible by SSH.</p>
+<h2 id="navigate-to-the-cluster-where-your-tenancy-is-assigned">Navigate to the cluster where your tenancy is assigned</h2>
+<ol>
+<li>Enable the UCL VPN</li>
+<li>Navigate to the Rancher GUI for Condenser: <code>https://rancher.condenser.arc.ucl.ac.uk</code></li>
+<li>Click on <strong>Log in with AzureAD</strong> to log in with your UCL credentials</li>
+<li>Begin at the Home page: <code>https://rancher.condenser.arc.ucl.ac.uk/dashboard/home</code></li>
+<li>Open the navigation at left (≡) and click on <strong>Virtualization Management</strong>
+under <strong>Global Apps</strong></li>
+<li>From the list of Harvester clusters, click on the name of the cluster you
+wish to access, e.g. <code>sl-p01</code></li>
+</ol>
+<h2 id="register-your-ssh-key">Register your SSH key</h2>
+<ol>
+<li>On your local computer, generate a SSH key pair if you do not already have one
+with a passphrase</li>
+<li>Copy the contents of your public key onto your clipboard</li>
+<li>In the Rancher GUI, from the menu at left, select <strong>Advanced</strong> &gt; <strong>SSH Keys</strong></li>
+<li>On the <strong>SSH Keys</strong> page, click on <strong>Create</strong> in the upper right</li>
+<li>Select your tenancy namespace</li>
+<li>Enter an appropriate name for your SSH key</li>
+<li>Paste the contents of your public key into the text box under <strong>Basics</strong></li>
+<li>Click <strong>Create</strong> in the lower right to register the SSH key</li>
+</ol>
+<h2 id="launch-a-virtual-machine">Launch a Virtual Machine</h2>
+<ol>
+<li>From the menu at left, select <strong>Virtual Machines</strong></li>
+<li>Click <strong>Create</strong> in the upper right</li>
+<li>Select your tenancy namespace</li>
+<li>Name the VM (e.g., <code>demo</code>)</li>
+<li>In the VM submenu, select <strong>Networks</strong></li>
+<li>From the <strong>Network</strong> drop-down menu, select your tenancy network</li>
+<li>In the VM submenu, select <strong>Volumes</strong></li>
+<li>Select the appropriate image (e.g., <code>harvester-public/almalinux-9.4-20240805</code>)</li>
+<li>Increase the <strong>Size</strong> to 50 GB</li>
+<li>In the VM submenu, select <strong>Basics</strong></li>
+<li>Increase the <strong>CPU</strong> setting to 2</li>
+<li>Increase the <strong>Memory</strong> to 8 GiB</li>
+<li>Select your SSH Key</li>
+<li>
+<p>Click <strong>Create</strong> in the lower right to launch the VM</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Occasionally the VM creation form will clear entries even though they
+appear to have been properly configured. This will cause errors to appear
+when you click <strong>Create</strong>. Re-enter them, wait for the <strong>Create</strong> button
+to reappear, and try again. It sometimes helps to focus the cursor out
+of the form fields after you configure a setting.</p>
+</div>
+</li>
+</ol>
+<h2 id="save-a-vm-configuration-as-a-template">Save a VM configuration as a template</h2>
+<ol>
+<li>From the menu at left, select <strong>Virtual Machines</strong></li>
+<li>Tick the box next to the VM</li>
+<li>From the menu at right (⋮), select <strong>Generate Template</strong></li>
+<li>Name the template</li>
+<li>To launch a VM from a template, in the VM creation form tick the <strong>Use VM Template</strong>
+box and select the appropriate template</li>
+</ol>
+<h2 id="log-in-to-the-vm-with-ssh">Log in to the VM with SSH</h2>
+<ol>
+<li>From the menu at left, select <strong>Virtual Machines</strong></li>
+<li>Identify the VM that you just launched in the list</li>
+<li>Wait for the IP address to appear, then copy it. The IP address will begin with
+<code>10.134</code>.</li>
+<li>Follow these instructions to <a href="../../ssh_login/">access the VM with SSH</a>.
+For VMs created from an Almalinux image, the username will be <code>almalinux</code>.</li>
+</ol>
+<h2 id="change-a-vms-state">Change a VM's state</h2>
+<ol>
+<li>From the menu at left, select <strong>Virtual Machines</strong></li>
+<li>Tick the box next to the VM</li>
+<li>Click <strong>Stop</strong>, <strong>Restart</strong>, <strong>Start</strong>, or <strong>Delete</strong> at the top of the table
+of VMs</li>
+</ol>
 
 
 
@@ -798,7 +885,7 @@ have been developed for use in deployments on Condenser.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 30, 2025 10:01:40 UTC">September 30, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 30, 2025 15:40:03 UTC">October 30, 2025</span>
   </span>
 
     
@@ -851,10 +938,10 @@ have been developed for use in deployments on Condenser.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.edit"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
