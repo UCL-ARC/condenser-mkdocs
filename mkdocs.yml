@@ -1,4 +1,4 @@
-site_name: Condenser User Documentation
+site_name: Condenser
 theme:
   name: material
   features:

@@ -2,7 +2,7 @@
 title: Home
 ---
 
-# Condenser User Documentation
+# Condenser
 
 Condenser is a private cloud platform for UCL. Condenser is developed and maintained
 by the Environments team of the [Advanced Research Computing Centre](https://www.ucl.ac.uk/advanced-research-computing/).
