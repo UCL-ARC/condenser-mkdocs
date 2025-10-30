@@ -1,4 +1,4 @@
-site_name: Condenser User Documentation
+site_name: Condenser
 theme:
   name: material
   features:
@@ -10,7 +10,7 @@ copyright: "UCL Advanced Research Computing, 2025"
 site_description: "Documentation for the UCL Condenser Platform"
 repo_url: https://github.com/UCL-ARC/condenser-mkdocs
 edit_uri: edit/main/docs/
-site_url: https://docs.condenser.arc.ucl.ac.uk
+site_url: https://condenser.arc.ucl.ac.uk
 plugins:
   - git-revision-date-localized
   - search
