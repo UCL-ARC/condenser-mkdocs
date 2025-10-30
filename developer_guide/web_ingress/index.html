@@ -1,0 +1,1362 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the UCL Condenser Platform">
+      
+      
+      
+        <link rel="canonical" href="https://docs.condenser.arc.ucl.ac.uk/developer_guide/web_ingress/">
+      
+      
+        <link rel="prev" href="../ssh_login/">
+      
+      
+        <link rel="next" href="../deploying_resources/deploying_kubernetes/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Configuring a VM for web ingress - Condenser User Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuring-a-vm-for-web-ingress" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Condenser User Documentation" class="md-header__button md-logo" aria-label="Condenser User Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Condenser User Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuring a VM for web ingress
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/UCL-ARC/condenser-mkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Condenser User Documentation" class="md-nav__button md-logo" aria-label="Condenser User Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Condenser User Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/UCL-ARC/condenser-mkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About the platform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prospective_user_guidance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prospective user guidance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terms_and_conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terms and conditions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Developer guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssh_access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuring a VM for SSH access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssh_login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logging into a VM by SSH
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Configuring a VM for web ingress
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuring a VM for web ingress
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Terraform
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Terraform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-ingress-to-a-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Ingress to a VM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure a Site
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-nginx-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Nginx Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rancher-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rancher GUI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rancher GUI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-ingress-to-a-vm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Ingress to a VM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-site_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure a Site
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-labels_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-labels_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-ingress" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Ingress
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-ingress-with-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Ingress with Terraform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-ingress-with-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Ingress with Terraform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#https-ingress" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTPS Ingress
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingress-to-a-k3s-vip-on-a-custom-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingress to a K3s VIP on a custom port
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-ingresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Ingresses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-ingresses-with-advanced-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Ingresses with advanced configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deploying resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Deploying resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying_resources/deploying_kubernetes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deploying with kubectl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying_resources/deploying_rancher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deploying with the Rancher GUI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying_resources/deploying_terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deploying with Terraform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Terraform
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Terraform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-ingress-to-a-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Ingress to a VM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure a Site
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-nginx-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Nginx Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rancher-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rancher GUI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rancher GUI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-ingress-to-a-vm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Ingress to a VM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-a-site_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure a Site
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-labels_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-labels_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-ingress" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Ingress
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-ingress-with-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Ingress with Terraform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-ingress-with-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Ingress with Terraform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#https-ingress" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTPS Ingress
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingress-to-a-k3s-vip-on-a-custom-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingress to a K3s VIP on a custom port
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-ingresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Ingresses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-ingresses-with-advanced-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Ingresses with advanced configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/UCL-ARC/condenser-mkdocs/edit/main/docs/developer_guide/web_ingress.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="configuring-a-vm-for-web-ingress">Configuring a VM for web ingress</h1>
+<p>Web ingress to Condenser can be configured automatically by tagging resources.
+Ingress must be enabled on your tenancy before it can be configured.</p>
+<p>HTTPS ingress will be configured with:</p>
+<ul>
+<li>A URL: <code>https://[hostname].[rancher project name].condenser.arc.ucl.ac.uk</code></li>
+<li>A valid LetsEncrypt certificate</li>
+</ul>
+<p>By default traffic will be routed to the <code>eth0</code> network interface on the VM, using
+HTTP on port 80.</p>
+<p>If a VM's IP address changes, the ingress rule will be updated. If a VM is powered
+off, the ingress rule will be deleted. Once the VM is powered back on, the ingress
+rule will be recreated.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Virtual machines can be configured with both tags and labels. On Condenser,
+ingress works by parsing tags into labels. This was done so that ingress can
+be configured automatically through Terraform, since only tags can be configured
+with the <code>harvester_virtualmachine</code> resource. In the GUI, you can configure either.
+You may wish to stick to one or the other (e.g. only modify tags, or only modify
+labels) to prevent confusion.</p>
+</div>
+<h2 id="configuration">Configuration</h2>
+<h3 id="using-terraform">Using Terraform</h3>
+<p>If using the <a href="https://registry.terraform.io/providers/harvester/harvester/latest/docs">Harvester Terraform provider</a>,
+ingress rules should be configured using the <code>tags</code> argument on the <a href="https://registry.terraform.io/providers/harvester/harvester/latest/docs/resources/virtualmachine"><code>harvester_virtualmachine</code></a>
+resource.</p>
+<h4 id="enable-ingress-to-a-vm">Enable Ingress to a VM</h4>
+<p>Add the following tag to enable ingress to a VM:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">condenser_ingress_isEnabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<h4 id="configure-a-site">Configure a Site</h4>
+<p>Each VM can support multiple sites - choose a unique key per site to ensure configuration
+is applied to the correct site. Keys must be unique within a VM. You should add
+a tag in the following format:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="l l-Scalar l-Scalar-Plain">condenser_ingress_[site-key]_[label-name]</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
+</code></pre></div>
+<p>For example, if you choose a key, <code>test</code>, the <code>hostname</code> label would be configured
+using:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">condenser_ingress_test_hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">some-hostname-here</span>
+</code></pre></div>
+<h4 id="required-labels">Required Labels</h4>
+<ul>
+<li><code>condenser_ingress_[site-key]/hostname: [hostname]</code>: Used to determine the FQDN.
+  The final ingressed FQDN will be <code>[hostname].[rancher project name].condenser.arc.ucl.ac.uk</code></li>
+</ul>
+<h4 id="optional-labels">Optional Labels</h4>
+<ul>
+<li><code>condenser_ingress_[site-key]/port: [port]</code>: Target port (default 443 if <code>protocol</code>
+  is https, 80 otherwise)</li>
+<li><code>condenser_ingress_[site-key]/protocol: [protocol]</code>: Target protocol (default http)</li>
+<li><code>condenser_ingress_[site-key]/vip: [vip]</code>: Target VIP (if the IP address is not
+  assigned to the VM)</li>
+<li><code>condenser_ingress_[site-key]/interface: [interface]</code>: Which network interface
+  to use if the VM has multiple network interfaces (default <code>eth0</code>)</li>
+</ul>
+<h4 id="advanced-nginx-configuration">Advanced Nginx Configuration</h4>
+<p>In addition to basic ingress rules, all <a href="https://github.com/kubernetes/ingress-nginx/blob/main/docs/user-guide/nginx-configuration/annotations.md">nginx annotations</a>
+are supported.</p>
+<p>An annotation can be added to an ingress rule by substituting <code>nginx.ingress.kubernetes.io</code>
+with <code>condenser_ingress_[site-key]_nginx</code>. For example, to annotate an ingress rule,
+<code>test</code>, with <code>nginx.ingress.kubernetes.io/proxy-body-size: 8m</code>, add the following
+tag to your VM:</p>
+<ul>
+<li><code>condenser_ingress_test_nginx/proxy-body-size: 8m</code></li>
+</ul>
+<h3 id="rancher-gui">Rancher GUI</h3>
+<p>To configure HTTPS ingress using the Rancher GUI, choose <code>Edit Config</code> on your VM
+and navigate to <code>Instance Labels</code>.</p>
+<p><strong>Note</strong>: When saving your VM, Rancher will ask if you wish to restart the VM.
+Restarting the VM is <em>not</em> necessary to configure ingress.</p>
+<h4 id="enable-ingress-to-a-vm_1">Enable Ingress to a VM</h4>
+<p>To enable a VM for ingress, add the Instance Label:</p>
+<ul>
+<li><code>condenser.ingress/isEnabled: true</code></li>
+</ul>
+<h4 id="configure-a-site_1">Configure a Site</h4>
+<p>Each VM can support multiple sites - choose a unique key per site to ensure configuration
+is applied to the correct site. Keys must be unique within a VM. You should add
+a tag in the following format:</p>
+<ul>
+<li><code>condenser.ingress.[site-key]/[label-name]: value</code></li>
+</ul>
+<p>For example, if you choose a key, <code>test</code>, the <code>hostname</code> label would be configured
+using:</p>
+<ul>
+<li><code>condenser.ingress.test/hostname: some-hostname-here</code></li>
+</ul>
+<h4 id="required-labels_1">Required Labels</h4>
+<ul>
+<li><code>condenser.ingress.[site-key]/hostname: &lt;hostname&gt;</code>: where the final ingressed
+  FQDN is <code>&lt;hostname&gt;.&lt;project name&gt;.condenser.arc.ucl.ac.uk</code></li>
+</ul>
+<h4 id="optional-labels_1">Optional Labels</h4>
+<ul>
+<li><code>condenser.ingress.[site-key]/port: [port]</code>: Target port (default 443 if protocol
+  is https, 80 otherwise)</li>
+<li><code>condenser.ingress.[site-key]/protocol: [protocol]</code>: Target protocol (default http)</li>
+<li><code>condenser.ingress.[site-key]/vip: [vip]</code>: Target VIP (if the IP address is not
+  assigned to the VM)</li>
+<li><code>condenser.ingress.[site-key]/interface: [interface]</code>: Which network interface
+  to use if the VM has multiple network interfaces (default <code>eth0</code>)</li>
+</ul>
+<h4 id="advanced-configuration">Advanced Configuration</h4>
+<p>In addition to basic ingress rules, all <a href="https://github.com/kubernetes/ingress-nginx/blob/main/docs/user-guide/nginx-configuration/annotations.md">nginx annotations</a>
+are supported.</p>
+<p>An annotation can be added to an ingress rule by substituting <code>nginx.ingress.kubernetes.io</code>
+with <code>condenser.ingress.[site-key].nginx</code>. For example, to annotate an ingress rule,
+<code>test</code>, with <code>nginx.ingress.kubernetes.io/proxy-body-size: 8m</code>, add the following
+instance label to your VM:</p>
+<ul>
+<li><code>condenser.ingress.test.nginx/proxy-body-size: 8m</code></li>
+</ul>
+<h3 id="examples">Examples</h3>
+<h4 id="basic-ingress">Basic Ingress</h4>
+<p>Create an ingress, <code>test</code>, which proxies <code>test-host.&lt;project name&gt;.condenser.arc.ucl.ac.uk</code>
+to the VM on port 80:</p>
+<ul>
+<li><code>condenser.ingress/isEnabled: true</code></li>
+<li><code>condenser.ingress.test/hostname: test-host</code></li>
+</ul>
+<h4 id="basic-ingress-with-terraform">Basic Ingress with Terraform</h4>
+<p>Create an ingress, <code>test</code>, which proxies <code>test-host.&lt;project name&gt;.condenser.arc.ucl.ac.uk</code>
+to the VM on port 80:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">  </span><span class="nb">tags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="na">condenser_ingress_isEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">true</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="na">condenser_ingress_test_hostname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;test-host&quot;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+<h4 id="advanced-ingress-with-terraform">Advanced Ingress with Terraform</h4>
+<p>Create an ingress, <code>test</code>, which proxies <code>test-host.&lt;project name&gt;.condenser.arc.ucl.ac.uk</code>
+to the VM on port 80 with <code>proxy-body-size</code> set to 8m</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">  </span><span class="nb">tags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="na">condenser_ingress_isEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">true</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="na">condenser_ingress_test_hostname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;test-host&quot;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="na">condenser_ingress_test_nginx_proxy-body-size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;8m&quot;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+<h4 id="https-ingress">HTTPS Ingress</h4>
+<p>Create an ingress, <code>test</code>, which proxies <code>test-host.&lt;project name&gt;.condenser.arc.ucl.ac.uk</code>
+to the VM on port 443 using HTTPS:</p>
+<ul>
+<li><code>condenser.ingress/isEnabled: true</code></li>
+<li><code>condenser.ingress.test/hostname: test-host</code></li>
+<li><code>condenser.ingress.test/port: 443</code></li>
+<li><code>condenser.ingress.test/protocol: https</code></li>
+</ul>
+<h4 id="ingress-to-a-k3s-vip-on-a-custom-port">Ingress to a K3s VIP on a custom port</h4>
+<p>Create an ingress, <code>testvip</code>, which proxies <code>test-host.&lt;project name&gt;.condenser.arc.ucl.ac.uk</code>
+to a K3s cluster's VIP, 10.134.8.9 on port 8080 using HTTP:</p>
+<ul>
+<li><code>condenser.ingress/isEnabled: true</code></li>
+<li><code>condenser.ingress.testvip/hostname: test-host</code></li>
+<li><code>condenser.ingress.testvip/port: 8080</code></li>
+<li><code>condenser.ingress.testvip/vip: 10.134.8.9</code></li>
+</ul>
+<h4 id="multiple-ingresses">Multiple Ingresses</h4>
+<p>Create two ingresses, <code>testone</code> and <code>testtwo</code>, which proxy <code>testone.&lt;project name&gt;.condenser.arc.ucl.ac.uk</code>
+and <code>testtwo.&lt;project name&gt;.condenser.arc.ucl.ac.uk</code> to the VM on port 8080/8081
+respectively using HTTP:</p>
+<ul>
+<li><code>condenser.ingress/isEnabled: true</code></li>
+<li><code>condenser.ingress.testone/hostname: testone</code></li>
+<li><code>condenser.ingress.testone/port: 8080</code></li>
+<li><code>condenser.ingress.testtwo/hostname: testtwo</code></li>
+<li><code>condenser.ingress.testtwo/port: 8081</code></li>
+</ul>
+<h4 id="multiple-ingresses-with-advanced-configuration">Multiple Ingresses with advanced configuration</h4>
+<p>Create two ingresses, <code>testone</code> and <code>testtwo</code>, which proxy <code>testone.&lt;project name&gt;.condenser.arc.ucl.ac.uk</code>
+and <code>testtwo.&lt;project name&gt;.condenser.arc.ucl.ac.uk</code> to the VM on port 8080/8081
+respectively using HTTP. <code>testone</code> requires a <code>proxy-buffer-size</code> of 8k, whilst
+<code>testtwo</code> needs a <code>proxy-body-size</code> of 8m:</p>
+<ul>
+<li><code>condenser.ingress/isEnabled: true</code></li>
+<li><code>condenser.ingress.testone/hostname: testone</code></li>
+<li><code>condenser.ingress.testone/port: 8080</code></li>
+<li><code>condenser.ingress.testone.nginx/proxy-buffer-size: 8k</code></li>
+<li><code>condenser.ingress.testtwo/hostname: testtwo</code></li>
+<li><code>condenser.ingress.testtwo/port: 8081</code></li>
+<li><code>condenser.ingress.testtwo.nginx/proxy-body-size: 8m</code></li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 30, 2025 12:07:40 UTC">October 30, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      UCL Advanced Research Computing, 2025
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

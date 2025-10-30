@@ -1,0 +1,49 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram name="Page-1" id="dgk3cub4o3nlJAYSmJj_">
+    <mxGraphModel dx="1108" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iHife_LYVzWXWUY8GXe_-1" value="Condenser" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontSize=18;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="10" y="10" width="690" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="iHife_LYVzWXWUY8GXe_-2" value="Production Cluster" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="30" y="60" width="480" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="iHife_LYVzWXWUY8GXe_-3" value="Management Cluster" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;fontSize=14;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
+          <mxGeometry x="530" y="60" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iHife_LYVzWXWUY8GXe_-4" value="Development Cluster" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;fontSize=14;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
+          <mxGeometry x="530" y="140" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iHife_LYVzWXWUY8GXe_-5" value="Bare-metal Units" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;fontSize=14;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
+          <mxGeometry x="530" y="220" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iHife_LYVzWXWUY8GXe_-7" value="Tenancy" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="50" y="100" width="140" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="iHife_LYVzWXWUY8GXe_-8" value="Namespace" style="text;strokeColor=none;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="iHife_LYVzWXWUY8GXe_-7" vertex="1">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iHife_LYVzWXWUY8GXe_-9" value="Network" style="text;strokeColor=none;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="iHife_LYVzWXWUY8GXe_-7" vertex="1">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iHife_LYVzWXWUY8GXe_-10" value="CPU &amp;amp; Storage Quota" style="text;strokeColor=none;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="iHife_LYVzWXWUY8GXe_-7" vertex="1">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iHife_LYVzWXWUY8GXe_-15" value="User access" style="text;strokeColor=none;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="iHife_LYVzWXWUY8GXe_-7" vertex="1">
+          <mxGeometry y="120" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iHife_LYVzWXWUY8GXe_-12" value="Neighbour Tenant" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="210" y="100" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iHife_LYVzWXWUY8GXe_-13" value="Neighbour Tenant" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="210" y="180" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iHife_LYVzWXWUY8GXe_-14" value="Neighbour Tenant" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="370" y="100" width="120" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
