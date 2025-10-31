@@ -27,8 +27,8 @@ Condenser comprises a large pool of computing resources, including:
 ## Technology stack
 
 Condenser is developed using Infrastructure as Code (IaC) and Continuous Integration/Continuous
-Deployment (CI/CD) methodologies. The following technologies are used to build the
-platform:
+Deployment (CI/CD) methodologies. Some of the technologies used to build the platform
+are:
 
 <table>
   <tr>
