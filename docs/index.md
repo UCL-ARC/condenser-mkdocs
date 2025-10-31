@@ -22,7 +22,7 @@ Condenser comprises a large pool of computing resources, including:
 - 8160 cores
 - 85TB RAM
 - 25 GbE interconnect
-- 48 x 80GB A100 GPUs
+- A100, H100, and H200 GPUs
 
 ## Technology stack
 
