@@ -229,6 +229,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -240,6 +253,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#by-the-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      By the numbers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology stack
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -606,6 +656,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#by-the-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      By the numbers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology stack
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -629,10 +705,45 @@
 
 
 <h1 id="condenser">Condenser</h1>
-<p>Condenser is a private cloud platform for UCL. Condenser is developed and maintained
-by the Environments team of the <a href="https://www.ucl.ac.uk/advanced-research-computing/">Advanced Research Computing Centre</a>.</p>
-<p>Users can refer to our <a href="documentation/">Documentation for developers</a>
+<p>Condenser is a private cloud platform for UCL. Based on traditional High-Performance
+Computing (HPC) hardware, the platform uses virtualisation and containerisation
+technologies to support a variety of services- from web applications to HPC clusters
+and Trusted Research Environments (TREs). Condenser is designed to enable cost-effective,
+cloud-native research computing at UCL.</p>
+<p>Condenser is developed and maintained by the Environments team within the
+<a href="https://www.ucl.ac.uk/advanced-research-computing/">Advanced Research Computing Centre</a>.
+Users can refer to our <a href="documentation/">Documentation for developers</a>
 for advice about deploying virtual resources on Condenser.</p>
+<h2 id="by-the-numbers">By the numbers</h2>
+<p>Condenser comprises a large pool of computing resources, including:</p>
+<ul>
+<li>8160 cores</li>
+<li>85TB RAM</li>
+<li>25 GbE interconnect</li>
+<li>A100, H100, and H200 GPUs</li>
+</ul>
+<h2 id="technology-stack">Technology stack</h2>
+<p>Condenser is developed using Infrastructure as Code (IaC) and Continuous Integration/Continuous
+Deployment (CI/CD) methodologies. Some of the technologies used to build the platform
+are:</p>
+<table>
+  <tr>
+    <td>Edge</td>
+    <td><a href="https://www.fortinet.com/">Fortinet</a></td>
+  </tr>
+  <tr>
+    <td>Platform</td>
+    <td><a href="https://www.rancher.com/">Rancher</a> <a href="https://harvesterhci.io/">Harvester</a> <a href="https://k3s.io/">K3s</a></td>
+  </tr>
+  <tr>
+    <td>Deployment</td>
+    <td><a href="https://developer.hashicorp.com/terraform">Terraform</a> <a href="https://developer.hashicorp.com/packer">Packer</a></td>
+  </tr>
+  <tr>
+    <td>Hardware</td>
+    <td><a href="https://www.lenovo.com/">Lenovo</a> <a href="https://www.nvidia.com/">Nvidia</a> <a href="https://www.ibm.com/">IBM</a></td>
+  </tr>
+</table>
 
 
 
@@ -653,7 +764,7 @@ for advice about deploying virtual resources on Condenser.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 30, 2025 15:40:03 UTC">October 30, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 31, 2025 15:29:38 UTC">October 31, 2025</span>
   </span>
 
     
