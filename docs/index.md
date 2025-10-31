@@ -33,18 +33,31 @@ are:
 <table>
   <tr>
     <td>Edge</td>
-    <td><a href="https://www.fortinet.com/">Fortinet</a></td>
+    <td>
+    <a href="https://www.fortinet.com/">Fortinet</a>
+    </td>
   </tr>
   <tr>
     <td>Platform</td>
-    <td><a href="https://www.rancher.com/">Rancher</a> <a href="https://harvesterhci.io/">Harvester</a> <a href="https://k3s.io/">K3s</a></td>
+    <td>
+    <a href="https://www.rancher.com/">Rancher</a>,
+    <a href="https://harvesterhci.io/">Harvester</a>,
+    <a href="https://k3s.io/">K3s</a>
+    </td>
   </tr>
   <tr>
     <td>Deployment</td>
-    <td><a href="https://developer.hashicorp.com/terraform">Terraform</a> <a href="https://developer.hashicorp.com/packer">Packer</a></td>
+    <td>
+    <a href="https://developer.hashicorp.com/terraform">Terraform</a>,
+    <a href="https://developer.hashicorp.com/packer">Packer</a>
+    </td>
   </tr>
   <tr>
     <td>Hardware</td>
-    <td><a href="https://www.lenovo.com/">Lenovo</a> <a href="https://www.nvidia.com/">Nvidia</a> <a href="https://www.ibm.com/">IBM</a></td>
+    <td>
+    <a href="https://www.lenovo.com/">Lenovo</a>,
+    <a href="https://www.nvidia.com/">Nvidia</a>,
+    <a href="https://www.ibm.com/">IBM</a>,
+    </td>
   </tr>
 </table>
