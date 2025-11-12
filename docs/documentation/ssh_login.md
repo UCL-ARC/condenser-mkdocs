@@ -49,16 +49,16 @@ https://developer.hashicorp.com/vault/install?product_intent=vault)
 3. Connect to the ISD VPN
 4. Login to Vault:
 
-   ``` sh
-   vault login -method=oidc
-   ```
+    ``` sh
+    vault login -method=oidc
+    ```
 
 5. Generate a certificate:
 
-   ``` sh
-   vault write -field=signed_key ssh-environments-ingress/sign/cloud-user \
-   public_key=@/home/user/.ssh/id_ed25519.pub >  ~/.ssh/id_arc.signed
-   ```
+    ``` sh
+    vault write -field=signed_key ssh-environments-ingress/sign/cloud-user \
+    public_key=@/home/user/.ssh/id_ed25519.pub >  ~/.ssh/id_arc.signed
+    ```
 
 (change `/home/user/.ssh/id_ed25519.pub` to the location of your own public key)
 
