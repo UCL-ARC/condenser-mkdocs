@@ -47,26 +47,18 @@ https://developer.hashicorp.com/vault/install?product_intent=vault)
 2. Set the `VAULT_ADDR` environment variable to `https://vault.arc.ucl.ac.uk`
 (you may wish to add this to your local environment)
 3. Connect to the ISD VPN
+4. Login to Vault:
 
-<ol start="4">
-  <li>
-   Login to Vault:
+    ``` sh
+    vault login -method=oidc
+    ```
 
-   ``` sh
-   vault login -method=oidc
-   ```
+5. Generate a certificate:
 
-  </li>
-  <li>
-   Generate a certificate:
-
-   ``` sh
-   vault write -field=signed_key ssh-environments-ingress/sign/cloud-user \
-   public_key=@/home/user/.ssh/id_ed25519.pub >  ~/.ssh/id_arc.signed
-   ```
-
-  </li>
-</ol>
+    ``` sh
+    vault write -field=signed_key ssh-environments-ingress/sign/cloud-user \
+    public_key=@/home/user/.ssh/id_ed25519.pub >  ~/.ssh/id_arc.signed
+    ```
 
 (change `/home/user/.ssh/id_ed25519.pub` to the location of your own public key)
 
