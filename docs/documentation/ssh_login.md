@@ -52,7 +52,6 @@ https://developer.hashicorp.com/vault/install?product_intent=vault)
    ``` sh
    vault login -method=oidc
    ```
-
 5. Generate a certificate:
 
    ``` sh
