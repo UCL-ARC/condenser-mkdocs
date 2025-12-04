@@ -2,54 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://condenser.arc.ucl.ac.uk/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-12-04</lastmod>
     </url>
     <url>
          <loc>https://condenser.arc.ucl.ac.uk/about/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-12-04</lastmod>
     </url>
     <url>
          <loc>https://condenser.arc.ucl.ac.uk/prospective_user_guidance/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-12-04</lastmod>
     </url>
     <url>
          <loc>https://condenser.arc.ucl.ac.uk/terms_and_conditions/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-12-04</lastmod>
     </url>
     <url>
          <loc>https://condenser.arc.ucl.ac.uk/documentation/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-12-04</lastmod>
     </url>
     <url>
          <loc>https://condenser.arc.ucl.ac.uk/documentation/examples/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-12-04</lastmod>
     </url>
     <url>
          <loc>https://condenser.arc.ucl.ac.uk/documentation/ssh_access/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-12-04</lastmod>
     </url>
     <url>
          <loc>https://condenser.arc.ucl.ac.uk/documentation/ssh_login/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-12-04</lastmod>
     </url>
     <url>
          <loc>https://condenser.arc.ucl.ac.uk/documentation/web_ingress/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-12-04</lastmod>
     </url>
     <url>
          <loc>https://condenser.arc.ucl.ac.uk/documentation/deploying_resources/deploying_kubernetes/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-12-04</lastmod>
     </url>
     <url>
          <loc>https://condenser.arc.ucl.ac.uk/documentation/deploying_resources/deploying_rancher/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-12-04</lastmod>
     </url>
     <url>
          <loc>https://condenser.arc.ucl.ac.uk/documentation/deploying_resources/deploying_terraform/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-12-04</lastmod>
     </url>
     <url>
          <loc>https://condenser.arc.ucl.ac.uk/stubs/kubeconfig/</loc>
-         <lastmod>2025-11-12</lastmod>
+         <lastmod>2025-12-04</lastmod>
     </url>
 </urlset>
