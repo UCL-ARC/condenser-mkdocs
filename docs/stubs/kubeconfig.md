@@ -12,12 +12,13 @@ The kubeconfig file contains a secret token that uses your credentials to authen
 to the Harvester cluster. Do not share it with anyone.
 
 1. Log in to the [Rancher GUI](https://rancher.condenser.arc.ucl.ac.uk/)
-2. Navigate to the Harvester cluster that you want to access
-3. In the bottom left corner, click on **Support**
-4. Click on **Download KubeConfig**. Your browser will download a file named
+2. In the left menu, click **Virtualization Management**
+3. Select a cluster in **Harvester Clusters** section that you want to access
+4. In the bottom left corner, click on **Support**
+5. Click on **Download KubeConfig**. Your browser will download a file named
 `<cluster name>.yaml`
-5. Open the downloaded file in a text editor
-6. Remove the `certificate-authority-data` key and value
+6. Open the downloaded file in a text editor
+7. Remove the `certificate-authority-data` key and value
 
 This is your kubeconfig file.
 
