@@ -10,7 +10,7 @@ We have written this guidance to help prospective users decide whether their pro
 can run on the Condenser platform. This guidance is not a binding contract.
 
 To discuss your potential tenancy and obtain a quote, please create a request in
-[MyServices](https://myservices.ucl.ac.uk/login) under the "Condenser" service.
+[MyServices](https://io.uk.xurrent.com/cnQ9NDU1Mg).
 
 ## Our responsibilities
 
