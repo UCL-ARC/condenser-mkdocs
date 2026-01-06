@@ -4,7 +4,7 @@ title: Deploying with the Rancher GUI
 
 # Deploying with the Rancher GUI
 
-Condenser consists of several [Harvester](https://docs.harvesterhci.io/v1.2/) clusters.
+Condenser consists of several [Harvester](https://docs.harvesterhci.io/) clusters.
 Harvester runs on [Kubernetes](https://kubernetes.io/); therefore each cluster is
 a specialized Kubernetes cluster. [Rancher](https://www.rancher.com/) is used to
 control access to the clusters, and provides a GUI which is accessible within the
