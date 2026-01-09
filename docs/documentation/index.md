@@ -7,6 +7,16 @@ title: Getting started
 The Condenser platform provides pools of compute and storage resources that can be
 used to create virtual machines, networks, and volumes.
 
+## Clusters
+
+Condenser is comprised of several Harvester clusters:
+
+| Cluster | Description |
+| ---     | ---         |
+| sl-p02  | The primary cluster for work on Condenser. Does not contain nodes with GPUs. |
+| sl-g01  | A cluster for GPU-based workloads. |
+| sl-g02  | A cluster for GPU-based workloads that only contains VAT-exempt GPUs. |
+
 ## Deploying virtual resources
 
 Within the UCL network, Condenser can be accessed through [Rancher](https://rancher.condenser.arc.ucl.ac.uk).
