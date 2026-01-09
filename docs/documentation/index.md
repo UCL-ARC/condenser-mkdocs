@@ -40,6 +40,6 @@ Please refer to the appropriate documentation. Some starting points are listed b
 
 ### Cloud infrastructure
 
-- [Harvester](https://docs.harvesterhci.io/v1.2/)
+- [Harvester](https://docs.harvesterhci.io/)
 - [Cloudinit](https://cloudinit.readthedocs.io/en/latest/)
 - [Kubernetes](https://kubernetes.io/docs/home/)

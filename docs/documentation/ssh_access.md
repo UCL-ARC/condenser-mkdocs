@@ -4,7 +4,7 @@ title: Configuring a VM for SSH access
 
 # Configuring a VM for SSH access
 
-To be accessible by SSH, a VM needs to be configured with a [VLAN Network](https://docs.harvesterhci.io/v1.2/networking/harvester-network/)
+To be accessible by SSH, a VM needs to be configured with a [VLAN Network](https://docs.harvesterhci.io/latest/networking/harvester-network/)
 and the SSH public key data needs to be provided via [cloudinit](https://cloudinit.readthedocs.io/en/latest/reference/modules.html#ssh).
 We have documentation demonstrating this for [Terraform deployments](./deploying_resources/deploying_terraform.md/#configure-the-vm-for-ssh-access)
 and for the [Rancher GUI](./deploying_resources/deploying_rancher.md).
