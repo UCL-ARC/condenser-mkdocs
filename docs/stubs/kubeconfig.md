@@ -6,7 +6,8 @@ title: Obtaining a kubeconfig file
 
 A kubeconfig file is required to remotely deploy infrastructure on the Harvester
 clusters within Condenser. You may need to provide it to `kubectl` or to the Harvester
-Terraform provider.
+Terraform provider. With a kubeconfig file you can take any action that your user
+account is permitted to do, including the destruction of resources.
 
 The kubeconfig file contains a secret token that uses your credentials to authenticate
 to the Harvester cluster. Do not share it with anyone.
@@ -17,8 +18,6 @@ to the Harvester cluster. Do not share it with anyone.
 4. In the bottom left corner, click on **Support**
 5. Click on **Download KubeConfig**. Your browser will download a file named
 `<cluster name>.yaml`
-6. Open the downloaded file in a text editor
-7. Remove the `certificate-authority-data` key and value
 
 This is your kubeconfig file.
 
