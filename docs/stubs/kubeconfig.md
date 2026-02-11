@@ -9,8 +9,12 @@ clusters within Condenser. You may need to provide it to `kubectl` or to the Har
 Terraform provider. With a kubeconfig file you can take any action that your user
 account is permitted to do, including the destruction of resources.
 
-The kubeconfig file contains a secret token that uses your credentials to authenticate
-to the Harvester cluster. Do not share it with anyone.
+
+!!! note
+    The kubeconfig file contains a secret token that uses your credentials to authenticate
+    to the Harvester cluster. Do not share it with anyone. If your kubeconfig file is
+    compromised, you can revoke the key from the [Account and API Keys](https://rancher.condenser.arc.ucl.ac.uk/dashboard/account)
+    page in Rancher.
 
 1. Log in to the [Rancher GUI](https://rancher.condenser.arc.ucl.ac.uk/)
 2. In the left menu, click **Virtualization Management**
