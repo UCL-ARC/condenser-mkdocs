@@ -1,8 +1,6 @@
 ---
-title: Fixing issues with image uploads
+title: Failed image upload
 ---
-
-# Image Uploads Stuck
 
 You may get into a situation where an image upload fails or get stuck - but a subsequent upload succeeds:
 
@@ -16,4 +14,4 @@ kubectl delete virtualmachineimage <image-id> -n <namespace> <-- will also fail 
 
 In this case, you need to remove the successful upload and then the failed one will also disappear.
 
-This is a known 'feature' of Harvester v1.7.1+ - if the display name of a successful image upload is the same as the failed one, Harvester gets into a 'Deadlocked' state - linking both failed and successful uploads to the same image
+This is a known 'feature' of Harvester v1.7.1+ - if the display name of a successful image upload is the same as the failed one, Harvester gets into a 'Deadlocked' state - linking both failed and successful uploads to the same image.
