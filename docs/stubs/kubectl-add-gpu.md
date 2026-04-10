@@ -28,7 +28,7 @@ devices:
   - deviceName: nvidia.com/GA100_A100_PCIE_80GB # Type of your device (via pcidevice)
     name: sl-g02-08-000031000                   # Name of your device
   interfaces:
-  - bridge: {} 
+  - bridge: {}
 ```
 
 In order to get the `deviceName` above, you can use the pcidevice resource:
