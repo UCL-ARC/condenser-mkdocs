@@ -10,7 +10,7 @@ We have documentation demonstrating this for [Terraform deployments](./deploying
 and for the [Rancher GUI](./deploying_resources/deploying_rancher.md).
 
 After the VM is configured, the IP address for the VM can be found in the Rancher
-GUI or by using `kubectl` with a suitable [kubeconfig file](../stubs/kubeconfig.md)
+GUI or by using `kubectl` with a suitable [kubeconfig file](./troubleshooting/kubeconfig.md)
 and the name of the namespace where the VM is deployed:
 
 ``` sh

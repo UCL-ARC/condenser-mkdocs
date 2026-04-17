@@ -10,7 +10,8 @@ the kubectl tool. This can be used to access features that are not yet enabled b
 Harvester.
 
 On your local computer, install [kubectl](https://kubernetes.io/docs/reference/kubectl/)
-and obtain a [kubeconfig file](../../stubs/kubeconfig.md) for a cluster on Condenser.
+and obtain a [kubeconfig file](../troubleshooting/kubeconfig.md) for a cluster on
+Condenser.
 
 Export the location of the kubeconfig file and try the following command to see the
 namespaces that you have permission to read:
