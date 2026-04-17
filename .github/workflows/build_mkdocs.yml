@@ -1,4 +1,4 @@
-name: Build with MkDocs-Material
+name: Build with Zensical
 
 on:
   push:
@@ -28,4 +28,4 @@ jobs:
 
       - name: Run a command
         run: |
-          mkdocs build
+          zensical build
