@@ -19,7 +19,7 @@ to launch a small VM on Condenser. The VM is optionally configured for SSH acces
 2. Install the [`terraform`](https://developer.hashicorp.com/terraform/install?product_intent=terraform)
 and [`kubectl`](https://kubernetes.io/releases/download/#kubectl) command line tools
 on your local computer
-3. Create the [`kubeconfig.yaml` file](../../stubs/kubeconfig.md)
+3. Create the [`kubeconfig.yaml` file](../troubleshooting/kubeconfig.md)
 4. Using the Rancher GUI, find the name of a namespace in which you have permission
 to deploy resources
 5. If you configure the VM for SSH access, you will also need:
@@ -183,7 +183,7 @@ output "ip_address" {
 
 ## Deploy the Terraform module
 
-Set the `KUBECONFIG` environment variable to point to your [kubeconfig file](../../stubs/kubeconfig.md):
+Set the `KUBECONFIG` environment variable to point to your [kubeconfig file](../troubleshooting/kubeconfig.md):
 
 ``` sh
 export KUBECONFIG="/path/to/kubeconfig.yaml"
