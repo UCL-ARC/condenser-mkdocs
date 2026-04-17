@@ -1,4 +1,4 @@
-# condenser-mkdocs
+# condenser-docs
 
 Documentation for the Condenser platform at UCL.
 
@@ -11,7 +11,7 @@ Documentation for the Condenser platform at UCL.
 We welcome contributions, especially additions to the list of [example deployments](/docs/developer_guide/examples.md)
 and corrections. Please fork the repository, make your changes, and create a pull
 request to contribute. To format the documentation pages, please refer to the
-[Material for Mkdocs documentation](https://squidfunk.github.io/mkdocs-material/reference/).
+[Zensical documentation](https://zensical.org/docs/get-started/).
 
 Please do not make requests for support through this repository.
 
@@ -20,15 +20,15 @@ Please do not make requests for support through this repository.
 To build the site locally:
 
 ``` sh
-git clone --depth 1 https://github.com/UCL-ARC/condenser-mkdocs.git
-cd condenser-mkdocs
-python -m venv mkdocs-material
-source mkdocs-material/bin/activate
+git clone --depth 1 https://github.com/UCL-ARC/condenser-docs.git
+cd condenser-docs
+python -m venv zensical
+source zensical/bin/activate
 python -m pip install -r requirements.txt
-mkdocs serve
+zensical serve
 ```
 
-You may need to source the `activate` script again to ensure that the correct mkdocs
+You may need to source the `activate` script again to ensure that the correct zensical
 executable is first on your `$PATH`.
 
 The site will be served at: <http://127.0.0.1:8000/>
