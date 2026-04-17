@@ -12,3 +12,5 @@ features = [
   "content.action.edit", # Edit this page
   "content.action.view"  # View source of this page
 ]
+favicon = "assets/favicon.ico"
+logo = "assets/UCL_social_icon_square_web.jpg"
